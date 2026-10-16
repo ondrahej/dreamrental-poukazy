@@ -212,6 +212,26 @@ section{padding-block:88px}
 .tip p{max-width:58ch;font-size:1.1rem}
 .tip b{font-family:var(--f-display);font-weight:700;font-size:1.25rem;display:block;margin-bottom:4px}
 section.tip{padding-block:0}
+/* ---- vánoční ozdoby v těle stránky ---- */
+.head .eyebrow::before,.head .eyebrow::after{content:"";display:inline-block;width:11px;height:11px;margin:0 10px 1px;vertical-align:middle;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9973f' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='M12 2v20M3.3 7l17.4 10M3.3 17l17.4-10M12 5.5l-2.2-2M12 5.5l2.2-2M12 18.5l-2.2 2M12 18.5l2.2 2'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.85}
+#recenze{position:relative;overflow:hidden}
+.svetla{position:absolute;top:0;left:0;width:100%;height:90px;pointer-events:none}
+.svetla .zar{filter:url(#rozmaz);opacity:.45;animation:trpyt 2.6s ease-in-out infinite;animation-delay:var(--z)}
+.svetla .zarovka{animation:zhasni 2.6s ease-in-out infinite;animation-delay:var(--z)}
+@keyframes trpyt{0%,100%{opacity:.5}50%{opacity:.15}}
+@keyframes zhasni{0%,100%{opacity:1}50%{opacity:.72}}
+.tip .wrap{position:relative}
+.cesmina{width:92px;height:auto;flex:none;margin-right:-14px;filter:drop-shadow(0 3px 4px rgba(90,60,10,.18))}
+.final canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.final .wrap{position:relative;z-index:1}
+.banka{position:absolute;top:0;z-index:2;display:flex;flex-direction:column;align-items:center;transform-origin:top center;animation:houpe 6s ease-in-out infinite;pointer-events:none}
+.banka .nit{display:block;width:1.5px;background:linear-gradient(var(--gold-light),var(--gold))}
+.banka svg{width:46px;height:auto;margin-top:-2px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.35))}
+.banka.b1{right:max(24px,calc(50% - 570px))}
+.banka.b2{left:calc(50% + 40px);animation-delay:-2.4s;animation-duration:7s}
+.banka.b2 svg{width:36px}
+@keyframes houpe{0%,100%{transform:rotate(3deg)}50%{transform:rotate(-3deg)}}
+
 
 body > footer{padding-block:34px;font-size:var(--s5);color:var(--ink-soft)}
 body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
@@ -236,6 +256,9 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   .v-bow{top:-6px}
   .reviews{grid-template-columns:1fr}
   .tip .wrap{text-align:center}
+  .cesmina{margin-right:0}
+  .banka.b1{right:18px}
+  .banka.b2{right:auto;left:18px}
 }
 @media (max-width:560px){
   .v-main{padding:30px 26px 26px}
@@ -247,9 +270,12 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   .scene .cord{height:34px}
   .scene .tag{top:34px}
   .hero-ctas .btn{width:100%;justify-content:center}
+  .banka .nit{height:40px!important}
+  .banka svg{width:34px}
+  .banka.b2 svg{width:28px}
 }
 @media (prefers-reduced-motion:reduce){
-  .scene .bow,.scene .hang{animation:none}
+  .scene .bow,.scene .hang,.banka,.svetla .zar,.svetla .zarovka{animation:none}
   .btn{transition:none}
   html{scroll-behavior:auto}
 }
@@ -381,6 +407,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   </section>
 
   <section id="recenze">
+    <svg class="svetla" viewBox="0 0 1440 90" preserveAspectRatio="xMidYMin slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><filter id="rozmaz" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="4"/></filter></defs><path d="M0 4Q120.0 64 240 4M240 4Q360.0 64 480 4M480 4Q600.0 64 720 4M720 4Q840.0 64 960 4M960 4Q1080.0 64 1200 4M1200 4Q1320.0 64 1440 4" fill="none" stroke="#3d4a63" stroke-width="1.6" stroke-linecap="round"/><g transform="translate(33.6 18.4) rotate(8.9)" style="--z:0.37s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(76.8 30.1) rotate(4.6)" style="--z:0.74s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(120.0 34.0) rotate(0.0)" style="--z:1.11s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(163.2 30.1) rotate(-4.6)" style="--z:1.48s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(206.4 18.4) rotate(-8.9)" style="--z:1.85s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(273.6 18.4) rotate(8.9)" style="--z:2.22s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(316.8 30.1) rotate(4.6)" style="--z:2.59s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(360.0 34.0) rotate(0.0)" style="--z:0.36s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(403.2 30.1) rotate(-4.6)" style="--z:0.73s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(446.4 18.4) rotate(-8.9)" style="--z:1.10s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(513.6 18.4) rotate(8.9)" style="--z:1.47s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(556.8 30.1) rotate(4.6)" style="--z:1.84s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(600.0 34.0) rotate(0.0)" style="--z:2.21s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(643.2 30.1) rotate(-4.6)" style="--z:2.58s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(686.4 18.4) rotate(-8.9)" style="--z:0.35s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(753.6 18.4) rotate(8.9)" style="--z:0.72s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(796.8 30.1) rotate(4.6)" style="--z:1.09s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(840.0 34.0) rotate(0.0)" style="--z:1.46s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(883.2 30.1) rotate(-4.6)" style="--z:1.83s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(926.4 18.4) rotate(-8.9)" style="--z:2.20s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(993.6 18.4) rotate(8.9)" style="--z:2.57s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1036.8 30.1) rotate(4.6)" style="--z:0.34s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1080.0 34.0) rotate(0.0)" style="--z:0.71s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1123.2 30.1) rotate(-4.6)" style="--z:1.08s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1166.4 18.4) rotate(-8.9)" style="--z:1.45s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1233.6 18.4) rotate(8.9)" style="--z:1.82s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1276.8 30.1) rotate(4.6)" style="--z:2.19s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1320.0 34.0) rotate(0.0)" style="--z:2.56s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1363.2 30.1) rotate(-4.6)" style="--z:0.33s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1406.4 18.4) rotate(-8.9)" style="--z:0.70s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g></svg>
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Recenze z Googlu</p>
@@ -454,6 +481,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
 
   <section class="tip">
     <div class="wrap">
+      <svg class="cesmina" viewBox="0 0 100 80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6 30) rotate(-22)"><path d="M0 0C6-5 10-2 14-7C17-3 22-3 24-8C26-3 31-2 34-6C35 0 40 2 44 0C40 4 40 9 44 13C38 13 35 16 34 21C31 17 26 17 24 22C22 17 17 17 14 21C11 16 6 16 0 13C3 9 3 4 0 0Z" fill="#2f6b46"/><path d="M2 6.5Q22 9 42 6.5" stroke="#5d9b72" stroke-width="1.4" fill="none"/></g><g transform="translate(94 38) rotate(200)"><path d="M0 0C6-5 10-2 14-7C17-3 22-3 24-8C26-3 31-2 34-6C35 0 40 2 44 0C40 4 40 9 44 13C38 13 35 16 34 21C31 17 26 17 24 22C22 17 17 17 14 21C11 16 6 16 0 13C3 9 3 4 0 0Z" fill="#3a7c53"/><path d="M2 6.5Q22 9 42 6.5" stroke="#6aa97f" stroke-width="1.4" fill="none"/></g><circle cx="45" cy="40" r="8" fill="url(#bv)"/><circle cx="57" cy="44" r="7.5" fill="url(#bv)"/><circle cx="49" cy="52" r="7" fill="url(#bv)"/><circle cx="42.5" cy="37.5" r="2" fill="#fff" opacity=".5"/><circle cx="55" cy="41.5" r="1.8" fill="#fff" opacity=".5"/></svg>
       <p><b>Nevíte, co vybrat?</b>Pro celý tým se hodí den ve sportovním autě, pro vedení a klíčové klienty Cybertruck. Napište nám, kolik lidí chcete obdarovat, a navrhneme vám rozdělení.</p>
       <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Firemn%C3%AD%20poukazy%20Dreamrental">Poradit s výběrem</a>
     </div>
@@ -487,6 +515,9 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   </section>
 
   <section class="final">
+    <canvas id="snih2" aria-hidden="true"></canvas>
+    <div class="banka b1" aria-hidden="true"><span class="nit" style="height:150px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="banka b2" aria-hidden="true"><span class="nit" style="height:84px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bv)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
     <div class="wrap final-grid">
       <div>
         <h2>Kolik poukazů pro váš tým připravíme?</h2>
@@ -520,14 +551,14 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
 </svg>
 
 <script>
-// Jemný sníh v úvodu; při omezení animací se nespouští.
-(function(){
-  var c=document.getElementById('snih'); if(!c||!c.getContext) return;
+// Jemný sníh v úvodu a v závěru; při omezení animací se nespouští.
+['snih','snih2'].forEach(function(id){
+  var c=document.getElementById(id); if(!c||!c.getContext) return;
   if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var x=c.getContext('2d'), w, h, d=window.devicePixelRatio||1, vl=[];
   function size(){ w=c.offsetWidth; h=c.offsetHeight; c.width=w*d; c.height=h*d; x.setTransform(d,0,0,d,0,0); }
   size(); addEventListener('resize', size);
-  for(var i=0;i<70;i++) vl.push({x:Math.random()*w, y:Math.random()*h, r:Math.random()*1.8+.6, s:Math.random()*.4+.2, o:Math.random()*.5+.3, k:Math.random()*6});
+  for(var i=0;i<(id==='snih2'?40:70);i++) vl.push({x:Math.random()*w, y:Math.random()*h, r:Math.random()*1.8+.6, s:Math.random()*.4+.2, o:Math.random()*.5+.3, k:Math.random()*6});
   (function krok(){
     x.clearRect(0,0,w,h);
     for(var i=0;i<vl.length;i++){ var p=vl[i]; p.y+=p.s; p.k+=.01; p.x+=Math.sin(p.k)*.25;
@@ -535,7 +566,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
       x.beginPath(); x.arc(p.x,p.y,p.r,0,6.283); x.fillStyle='rgba(255,255,255,'+p.o+')'; x.fill(); }
     requestAnimationFrame(krok);
   })();
-})();
+});
 </script>
 </body>
 </html>
