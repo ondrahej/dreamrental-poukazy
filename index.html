@@ -236,6 +236,14 @@ section.tip{padding-block:0}
 body > footer{padding-block:34px;font-size:var(--s5);color:var(--ink-soft)}
 body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
 
+/* jemné vločky v rozích sekcí uprostřed stránky */
+.vlocky{position:relative;overflow:hidden}
+.vlocky > .wrap{position:relative;z-index:1}
+.vlocky::before,.vlocky::after{content:"";position:absolute;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 -50 100 100' fill='none' stroke='%23c9973f' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath transform='rotate%280%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%2860%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%28120%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%28180%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%28240%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%28300%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Ccircle r='4.5'/%3E%3C/svg%3E") center/contain no-repeat}
+.vlocky::before{width:190px;height:190px;top:-46px;left:-58px;opacity:.13;transform:rotate(12deg)}
+.vlocky::after{width:70px;height:70px;bottom:36px;right:6%;opacity:.16;transform:rotate(-8deg)}
+.vlocky.vpravo::before{left:auto;right:-58px;transform:rotate(-14deg)}
+.vlocky.vpravo::after{right:auto;left:6%}
 @media (max-width:960px){
   .hero-grid{grid-template-columns:1fr;padding-block:8px 18px}
   .scene{max-width:440px;margin-top:34%}
@@ -261,6 +269,8 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   .banka.b2{right:auto;left:18px}
 }
 @media (max-width:560px){
+  .vlocky::before{width:120px;height:120px;top:-30px}
+  .vlocky::after{display:none}
   .v-main{padding:30px 26px 26px}
   section{padding-block:64px}
   .why-grid{grid-template-columns:1fr}
@@ -327,7 +337,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
 </header>
 
 <main>
-  <section id="darky">
+  <section id="darky" class="vlocky">
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Tři dárky pod stromeček</p>
@@ -423,7 +433,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
     </div>
   </section>
 
-  <section class="why">
+  <section class="why vlocky vpravo">
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Proč jako firemní dárek</p>
@@ -458,7 +468,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
     </div>
   </section>
 
-  <section>
+  <section class="vlocky">
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Z čeho si vyberou</p>
@@ -487,7 +497,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
     </div>
   </section>
 
-  <section class="why">
+  <section class="why vlocky vpravo">
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Jak to probíhá</p>
@@ -501,7 +511,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
     </div>
   </section>
 
-  <section>
+  <section class="vlocky">
     <div class="wrap">
       <div class="head"><p class="eyebrow">Časté dotazy</p><h2>Co se firmy ptají nejčastěji</h2></div>
       <div class="faq">
