@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" width="99.999" height="100" version="1.1" viewBox="0 0 99.999 100">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st0, .st1 {
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        fill: #8ab52c;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M50.25,100C22.637,100,0,77.615,0,50S22.637,0,50.25,0h49.749v50c0,27.615-22.134,50-49.749,50"/>
+  <polygon class="st0" points="83.083 48.901 66.319 11.047 57.438 19.928 67.232 42.045 45.115 32.251 45.003 32.363 45.003 32.363 36.123 41.242 45.916 63.36 23.8 53.565 14.917 62.447 52.776 79.21 61.655 70.331 61.655 70.331 61.768 70.217 51.974 48.103 74.09 57.896 82.97 49.015 82.97 49.015 83.083 48.901"/>
+</svg>
