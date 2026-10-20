@@ -299,27 +299,6 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   .btn{transition:none}
   html{scroll-behavior:auto}
 }
-.hero-chips{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:.95rem;color:rgba(255,255,255,.8)}
-.hero-chips span::before{content:"✓ ";color:var(--gold-light);font-weight:700}
-.hero h1{font-size:clamp(2.1rem,3.2vw + 1rem,3.4rem);line-height:1.05}
-.hero-lead{max-width:30ch}
-.scene .tag{font-size:1.2rem}
-.price s{display:none}
-.price em{white-space:nowrap}
-.banka.b3{left:max(24px,calc(50% - 570px));animation-delay:-1.2s;animation-duration:6.5s}
-.kontakt-radek{margin-top:14px;font-size:1rem;opacity:.92}
-.kontakt-radek a{color:inherit;font-weight:600}
-@media(max-width:720px){.banka.b3{left:18px}.hero h1{font-size:clamp(1.9rem,8vw,2.6rem)}}
-.fleet3{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media(max-width:720px){.fleet3{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.banka.b1 svg,.banka.b3 svg{width:62px}
-.banka.cerv svg{filter:hue-rotate(335deg) saturate(1.6) drop-shadow(0 10px 14px rgba(0,0,0,.35))}
-.banka.modr svg{filter:hue-rotate(175deg) saturate(1.3) drop-shadow(0 10px 14px rgba(0,0,0,.35))}
-@media(max-width:720px){.banka.b1 svg,.banka.b3 svg{width:44px}}
-.strip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin:0 auto 40px;padding:0;list-style:none;font-weight:600}
-.strip li::before{content:"✓ ";color:var(--gold);font-weight:700}
-.podpis{margin-top:18px;opacity:.85}
-.vic{text-align:center;margin-top:34px}
 </style>
 </head>
 <body>
@@ -329,14 +308,13 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   <div class="wrap hero-bar"><img src="../img/logo.svg" alt="DREAMRENTAL" width="195" height="59"></div>
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Firemní dárky pro Global Travel</p>
-      <h1>Dárek, který si člověk <em>opravdu užije.</em></h1>
-      <p class="hero-lead">Den za volantem sportovního auta, s vaším logem na poukazu.</p>
+      <p class="eyebrow">Firemní vánoční poukazy pro Global Travel</p>
+      <h1>Co darovat někomu, kdo už má <em>všechno?</em></h1>
+      <p class="hero-lead">Den za volantem Tesly Cybertruck. V Česku jich jezdí jen pár a řídit si ji zkusí málokdo. Poukaz připravíme s logem vaší firmy a na fakturu.</p>
       <div class="hero-ctas">
-        <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Re%3A%20N%C3%A1pad%20na%20firemn%C3%AD%20d%C3%A1rky%20pro%20Global%20Travel">Probrat možnosti pro naši firmu</a>
-        <a class="btn btn-ghost" href="#ukazka">Ukázka poukazu</a>
+        <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Poukazy%20pro%20Global%20Travel">Chci nabídku pro náš tým</a>
+        <a class="btn btn-ghost" href="#darky">Prohlédnout dárky</a>
       </div>
-      <p class="hero-chips"><span>Vaše logo a věnování</span><span>Faktura na IČO</span><span>Platnost 12 měsíců</span></p>
       <a class="stars" href="#recenze"><span aria-hidden="true">★★★★★</span><b>4,9</b> ze 155 recenzí na Googlu</a>
     </div>
     <div class="scene" aria-hidden="true">
@@ -369,12 +347,68 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
 </header>
 
 <main>
-  <section class="vsec" id="ukazka">
+  <section id="darky" class="vlocky">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Ukázka pro vás</p>
-        <h2>Takto může vypadat váš poukaz</h2>
-        <p>Logo i věnování doladíme podle vás.</p>
+        <p class="eyebrow">Tři dárky pod stromeček</p>
+        <h2>Vyberte, jak velký zážitek darujete</h2>
+        <p>Každý poukaz platí 12 měsíců. Obdarovaný si termín domluví sám a auto si vyzvedne v Praze, nebo mu ho přistavíme.</p>
+      </div>
+
+      <div class="gifts">
+        <article class="gift">
+          <span class="lid"></span>
+          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
+          <div class="pic"><img src="../img/auta/bmw-m2.webp" alt="BMW M2" loading="lazy"></div>
+          <div class="body">
+            <h3>Den ve sportovním autě</h3>
+            <p class="sub">BMW M2, Mercedes C63 nebo Alpine A110 GTS</p>
+            <dl class="spec"><div><dt>Výkon</dt><dd>460 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,7 s</dd></div></dl>
+            <p class="price"><s>4 990 Kč</s><strong>4 740 Kč</strong><em>firemní cena</em><span class="dph">Cena za jeden poukaz včetně DPH</span></p>
+          </div>
+        </article>
+
+        <article class="gift star">
+          <span class="lid"></span>
+          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
+          <div class="pic"><img src="../img/auta/tesla-cybertruck.webp" alt="Tesla Cybertruck" loading="lazy"></div>
+          <div class="body">
+            <span class="badge">Nejvíc se o něm mluví</span>
+            <h3>Den s Teslou Cybertruck</h3>
+            <p class="sub">Nerezový elektrický pick-up, který na české silnici málokdo viděl naživo.</p>
+            <dl class="spec"><div><dt>Výkon</dt><dd>603 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,8 s</dd></div></dl>
+            <p class="price"><s>10 990 Kč</s><strong>10 440 Kč</strong><em>firemní cena</em><span class="dph">Cena za jeden poukaz včetně DPH</span></p>
+          </div>
+        </article>
+
+        <article class="gift">
+          <span class="lid"></span>
+          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
+          <div class="pic"><img src="../img/auta/mercedes-amg-gt-63s.webp" alt="Mercedes-AMG GT 63 S" loading="lazy"></div>
+          <div class="body">
+            <h3>Den v Mercedesu-AMG</h3>
+            <p class="sub">Mercedes-AMG GT 63 S, AMG SL43 nebo BMW M4 Cabrio</p>
+            <dl class="spec"><div><dt>Výkon</dt><dd>639 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,2 s</dd></div></dl>
+            <p class="price"><s>5 990 Kč</s><strong>5 690 Kč</strong><em>firemní cena</em><span class="dph">Cena za jeden poukaz včetně DPH</span></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="more">
+        <p><b>Kupujete pro víc lidí?</b> Napište nám počet poukazů a nabídku připravíme na míru. Poukaz vystavíme i na libovolnou částku od 500 Kč, obdarovaný si pak auto vybere sám.</p>
+        <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Poukazy%20pro%20Global%20Travel">Napsat počet poukazů</a>
+      </div>
+      <p class="note">Ceny jsou včetně DPH.</p>
+    </div>
+  </section>
+
+
+  <section class="vsec">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Ukázka</p>
+        <h2>Takhle může vypadat poukaz pro Global Travel</h2>
+        <p>Logo, barvy a věnování doplníme podle vás. Návrh vám pošleme ke schválení dřív, než poukazy vystavíme.</p>
       </div>
       <div class="voucher" role="img" aria-label="Ukázka dárkového poukazu s názvem vaší firmy">
         <div class="v-main">
@@ -386,97 +420,8 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
         </div>
         <div class="v-side">
           <svg class="v-bow" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
-          <div class="v-logo has-logo"><img src="logo.png" alt="Logo Global Travel"></div>
+          <div class="v-logo has-logo on-dark"><img src="logo.png" alt="Logo Global Travel"></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="darky" class="vlocky why">
-    <div class="banka b3 cerv" aria-hidden="true"><span class="nit" style="height:70px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="banka b1 modr" aria-hidden="true"><span class="nit" style="height:120px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Tři varianty</p>
-        <h2>Pro koho dárek vybíráte?</h2>
-        <p>Poukaz platí 12 měsíců, termín si obdarovaný domluví sám.</p>
-      </div>
-
-      <div class="gifts">
-        <article class="gift">
-          <span class="lid"></span>
-          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
-          <div class="pic"><img src="../img/auta/bmw-m2.webp" alt="BMW M2" loading="lazy"></div>
-          <div class="body">
-            <h3>Sportovní den</h3>
-            <p class="sub">Pro kolegy a členy týmu</p>
-            <p class="price"><strong>4 740 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 4 990 Kč · včetně DPH</span></p>
-          </div>
-        </article>
-
-        <article class="gift star">
-          <span class="lid"></span>
-          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
-          <div class="pic"><img src="../img/auta/tesla-cybertruck.webp" alt="Tesla Cybertruck" loading="lazy"></div>
-          <div class="body">
-            <span class="badge">Nejvíc se o něm mluví</span>
-            <h3>Den s Teslou Cybertruck</h3>
-            <p class="sub">Pro někoho, kdo chce něco neobvyklého</p>
-            <p class="price"><strong>10 440 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 10 990 Kč · včetně DPH</span></p>
-          </div>
-        </article>
-
-        <article class="gift">
-          <span class="lid"></span>
-          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
-          <div class="pic"><img src="../img/auta/mercedes-amg-gt-63s.webp" alt="Mercedes-AMG GT 63 S" loading="lazy"></div>
-          <div class="body">
-            <h3>Prémiová jízda</h3>
-            <p class="sub">Pro obchodní partnery a klienty</p>
-            <p class="price"><strong>5 690 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 5 990 Kč · včetně DPH</span></p>
-          </div>
-        </article>
-      </div>
-
-      <div class="more">
-        <p><b>Kupujete pro víc lidí?</b> Napište počet poukazů, nabídku připravíme na míru.</p>
-        <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Re%3A%20N%C3%A1pad%20na%20firemn%C3%AD%20d%C3%A1rky%20pro%20Global%20Travel">Poslat nezávaznou nabídku</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="vlocky vpravo">
-    <div class="banka b1 cerv" aria-hidden="true"><span class="nit" style="height:90px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="banka b3 modr" aria-hidden="true"><span class="nit" style="height:140px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Z čeho si vyberou</p>
-        <h2>Nebo kterékoli z dvaceti aut v Praze</h2>
-        <p>S poukazem na částku si obdarovaný vybere sám.</p>
-      </div>
-      <div class="fleet fleet3">
-        <article class="car"><div class="ph"><img src="../img/auta/porsche-gt4-mr.webp" alt="Porsche Cayman GT4 MR" loading="lazy"></div><h3>Porsche Cayman GT4 MR<span>Sportovní</span></h3></article>
-        <article class="car"><div class="ph"><img src="../img/auta/audi-r8.webp" alt="Audi R8" loading="lazy"></div><h3>Audi R8<span>Sportovní</span></h3></article>
-        <article class="car"><div class="ph"><img src="../img/auta/bmw-m5.webp" alt="BMW M5" loading="lazy"></div><h3>BMW M5<span>Sportovní</span></h3></article>
-        <article class="car"><div class="ph"><img src="../img/auta/mercedes-amg-g63.webp" alt="Mercedes-AMG G63" loading="lazy"></div><h3>Mercedes-AMG G63<span>SUV</span></h3></article>
-        <article class="car"><div class="ph"><img src="../img/auta/bmw-m4-cabrio.webp" alt="BMW M4 Cabrio" loading="lazy"></div><h3>BMW M4 Cabrio<span>Kabriolet</span></h3></article>
-        <article class="car"><div class="ph"><img src="../img/auta/audi-rs6.webp" alt="Audi RS6" loading="lazy"></div><h3>Audi RS6<span>Sportovní kombi</span></h3></article>
-      </div>
-      <p class="vic"><a class="btn btn-line" href="https://dreamrental.eu/auta/" target="_blank" rel="noopener">Celá flotila na dreamrental.eu</a></p>
-    </div>
-  </section>
-
-  <section class="why vlocky">
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Jak to probíhá</p>
-        <h2>Tři kroky k poukazu</h2>
-      </div>
-      <ul class="strip"><li>Vaše logo a věnování</li><li>Faktura na IČO</li><li>Platnost 12 měsíců</li><li>Hotovo do 3 dnů</li></ul>
-      <div class="steps">
-        <div class="step"><h3>Napíšete nám</h3><p>Počet poukazů a jejich hodnotu. Stačí odpovědět na e-mail.</p></div>
-        <div class="step"><h3>Pošleme nabídku</h3><p>S cenou a návrhem poukazu s vaším logem.</p></div>
-        <div class="step"><h3>Dodáme poukazy</h3><p>Do 3 dnů v PDF, nebo osobně v Praze.</p></div>
       </div>
     </div>
   </section>
@@ -499,14 +444,92 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   </section>
 
   <section class="why vlocky vpravo">
-    <div class="banka b3 modr" aria-hidden="true"><span class="nit" style="height:80px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="banka b1 cerv" aria-hidden="true"><span class="nit" style="height:110px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
     <div class="wrap">
-      <div class="head"><p class="eyebrow">Časté dotazy</p><h2>Co firmy zajímá nejčastěji</h2></div>
+      <div class="head">
+        <p class="eyebrow">Proč jako firemní dárek</p>
+        <h2>Dárek s vaším jménem, o kterém se bude mluvit</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="10" width="36" height="26" rx="5" fill="#d4e0f8"/><rect x="10" y="17" width="12" height="12" rx="2" fill="#c9973f"/><rect x="26" y="18" width="9" height="3" rx="1.5" fill="#1b2236"/><rect x="26" y="24" width="6" height="3" rx="1.5" fill="#56607a"/></svg>
+          <div><h3>Vaše logo a věnování</h3><p>Poukaz připravíme v barvách vaší firmy, s logem a vlastním textem pro každého obdarovaného.</p></div>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M11 5h16l8 8v26H11z" fill="#d4e0f8"/><path d="M27 5v8h8" fill="#c9973f"/><rect x="16" y="21" width="14" height="3" rx="1.5" fill="#1b2236"/><rect x="16" y="28" width="10" height="3" rx="1.5" fill="#56607a"/></svg>
+          <div><h3>Faktura na IČO</h3><p>Vystavíme fakturu na firmu a pošleme daňový doklad. Hodnota poukazu je konečná.</p></div>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="6" y="9" width="32" height="29" rx="5" fill="#d4e0f8"/><rect x="6" y="9" width="32" height="8" rx="4" fill="#c9973f"/><rect x="13" y="5" width="3" height="8" rx="1.5" fill="#1b2236"/><rect x="28" y="5" width="3" height="8" rx="1.5" fill="#1b2236"/><text x="22" y="33" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700" font-size="12" fill="#1b2236">12</text></svg>
+          <div><h3>Platnost 12 měsíců</h3><p>Poukaz platí rok od zakoupení, takže jízda může být klidně až v létě.</p></div>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="15" cy="16" r="7" fill="#d4e0f8"/><circle cx="29" cy="16" r="7" fill="#c9973f"/><path d="M5 37c1-8 6-11 10-11s9 3 10 11z" fill="#d4e0f8"/><path d="M19 37c1-8 6-11 10-11s9 3 10 11z" fill="#c9973f"/></svg>
+          <div><h3>Jde předat dál</h3><p>Poukaz může uplatnit i někdo jiný. Stačí nám to předem dát vědět.</p></div>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="11" width="34" height="23" rx="4" fill="#d4e0f8"/><path d="M5 14l17 12 17-12" fill="none" stroke="#c9973f" stroke-width="3" stroke-linejoin="round"/></svg>
+          <div><h3>Hotové do 3 dnů</h3><p>Poukazy pošleme v PDF e-mailem, nebo je předáme osobně v Praze.</p></div>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 5l5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2z" fill="#c9973f"/></svg>
+          <div><h3>Termín podle obdarovaného</h3><p>Auto mu rezervujeme dopředu. Vyzvedne si ho v Praze, nebo mu ho přistavíme.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vlocky">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Z čeho si vyberou</p>
+        <h2>Celá flotila v Praze</h2>
+        <p>S poukazem na částku si obdarovaný může vybrat kterékoli z dvaceti aut.</p>
+      </div>
+      <div class="fleet">
+        <article class="car"><div class="ph"><img src="../img/auta/tesla-cybertruck.webp" alt="Tesla Cybertruck" loading="lazy"></div><h3>Tesla Cybertruck<span>Elektromobil · 2024</span></h3><dl class="spec"><div><dt>Výkon</dt><dd>603 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,8 s</dd></div></dl></article>
+        <article class="car"><div class="ph"><img src="../img/auta/mercedes-amg-g63.webp" alt="Mercedes-AMG G63" loading="lazy"></div><h3>Mercedes-AMG G63<span>SUV · 2025</span></h3><dl class="spec"><div><dt>Výkon</dt><dd>585 koní</dd></div><div><dt>0–100 km/h</dt><dd>4,4 s</dd></div></dl></article>
+        <article class="car"><div class="ph"><img src="../img/auta/porsche-gt4-mr.webp" alt="Porsche Cayman GT4 MR" loading="lazy"></div><h3>Porsche Cayman GT4 MR<span>Sportovní · 2020</span></h3><dl class="spec"><div><dt>Výkon</dt><dd>414 koní</dd></div><div><dt>0–100 km/h</dt><dd>4,4 s</dd></div></dl></article>
+        <article class="car"><div class="ph"><img src="../img/auta/audi-r8.webp" alt="Audi R8" loading="lazy"></div><h3>Audi R8<span>Sportovní · 2024</span></h3><dl class="spec"><div><dt>Výkon</dt><dd>570 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,2 s</dd></div></dl></article>
+        <article class="car"><div class="ph"><img src="../img/auta/audi-rs6.webp" alt="Audi RS6" loading="lazy"></div><h3>Audi RS6<span>Sportovní kombi · 2025</span></h3><dl class="spec"><div><dt>Výkon</dt><dd>630 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,4 s</dd></div></dl></article>
+        <article class="car"><div class="ph"><img src="../img/auta/bmw-m4-cabrio.webp" alt="BMW M4 Cabrio" loading="lazy"></div><h3>BMW M4 Cabrio<span>Kabriolet · 2025</span></h3><dl class="spec"><div><dt>Výkon</dt><dd>510 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,5 s</dd></div></dl></article>
+        <article class="car"><div class="ph"><img src="../img/auta/mercedes-amg-gt-63s.webp" alt="Mercedes-AMG GT 63 S" loading="lazy"></div><h3>Mercedes-AMG GT 63 S<span>Sportovní sedan · 2019</span></h3><dl class="spec"><div><dt>Výkon</dt><dd>639 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,2 s</dd></div></dl></article>
+        <article class="car"><div class="ph"><img src="../img/auta/bmw-m5.webp" alt="BMW M5" loading="lazy"></div><h3>BMW M5<span>Sportovní · 2025</span></h3><dl class="spec"><div><dt>Výkon</dt><dd>727 koní</dd></div><div><dt>0–100 km/h</dt><dd>3,5 s</dd></div></dl></article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="tip">
+    <div class="wrap">
+      <svg class="cesmina" viewBox="0 0 100 80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6 30) rotate(-22)"><path d="M0 0C6-5 10-2 14-7C17-3 22-3 24-8C26-3 31-2 34-6C35 0 40 2 44 0C40 4 40 9 44 13C38 13 35 16 34 21C31 17 26 17 24 22C22 17 17 17 14 21C11 16 6 16 0 13C3 9 3 4 0 0Z" fill="#2f6b46"/><path d="M2 6.5Q22 9 42 6.5" stroke="#5d9b72" stroke-width="1.4" fill="none"/></g><g transform="translate(94 38) rotate(200)"><path d="M0 0C6-5 10-2 14-7C17-3 22-3 24-8C26-3 31-2 34-6C35 0 40 2 44 0C40 4 40 9 44 13C38 13 35 16 34 21C31 17 26 17 24 22C22 17 17 17 14 21C11 16 6 16 0 13C3 9 3 4 0 0Z" fill="#3a7c53"/><path d="M2 6.5Q22 9 42 6.5" stroke="#6aa97f" stroke-width="1.4" fill="none"/></g><circle cx="45" cy="40" r="8" fill="url(#bv)"/><circle cx="57" cy="44" r="7.5" fill="url(#bv)"/><circle cx="49" cy="52" r="7" fill="url(#bv)"/><circle cx="42.5" cy="37.5" r="2" fill="#fff" opacity=".5"/><circle cx="55" cy="41.5" r="1.8" fill="#fff" opacity=".5"/></svg>
+      <p><b>Nevíte, co vybrat?</b>Pro celý tým se hodí den ve sportovním autě, pro vedení a klíčové klienty Cybertruck. Napište nám, kolik lidí chcete obdarovat, a navrhneme vám rozdělení.</p>
+      <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Poukazy%20pro%20Global%20Travel">Poradit s výběrem</a>
+    </div>
+  </section>
+
+  <section class="why vlocky vpravo">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Jak to probíhá</p>
+        <h2>Od e-mailu k poukazu pod stromečkem</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Napíšete nám</h3><p>Kolik poukazů potřebujete a jakou mají mít hodnotu. Stačí odpovědět na e-mail, který vám přišel.</p></div>
+        <div class="step"><h3>Pošleme nabídku a fakturu</h3><p>Připravíme cenu podle počtu poukazů a návrh poukazu s vaším logem.</p></div>
+        <div class="step"><h3>Dodáme poukazy</h3><p>Do 3 dnů od zaplacení v PDF, nebo osobně v Praze. Pak už jen rozdat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vlocky">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Časté dotazy</p><h2>Co se firmy ptají nejčastěji</h2></div>
       <div class="faq">
-        <details><summary>Dá se poukaz vystavit na fakturu?</summary><p>Ano, na IČO vaší firmy, včetně daňového dokladu.</p></details>
-        <details><summary>Jak vypadá poukaz s naším logem?</summary><p>Návrh vám pošleme předem. Doplníme logo, barvy a věnování.</p></details>
-        <details><summary>Může poukaz uplatnit někdo jiný?</summary><p>Ano, poukaz je přenosný. Stačí nám předem dát vědět.</p></details>
+        <details><summary>Jak dlouho poukaz platí?</summary><p>12 měsíců od zakoupení. Termín jízdy si obdarovaný domluví s naším obchodním oddělením a auto mu rezervujeme dopředu.</p></details>
+        <details><summary>Může poukaz uplatnit někdo jiný?</summary><p>Ano, poukaz je přenosný. Stačí nám předem dát vědět, kdo si auto přebírá.</p></details>
+        <details><summary>Dá se poukaz vystavit na fakturu?</summary><p>Ano. Vystavíme fakturu na IČO vaší firmy a pošleme daňový doklad.</p></details>
+        <details><summary>Jak vypadá poukaz s naším logem?</summary><p>Pošleme vám návrh předem. Doplníme logo, barvy vaší firmy a věnování. U poukazu na konkrétní auto můžeme hodnotu skrýt.</p></details>
+        <details><summary>Co když pronájem stojí víc než poukaz?</summary><p>Obdarovaný doplatí jen rozdíl. U levnějšího pronájmu mu zbytek zůstává na poukazu do konce platnosti.</p></details>
       </div>
     </div>
   </section>
@@ -517,11 +540,10 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
     <div class="banka b2" aria-hidden="true"><span class="nit" style="height:84px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bv)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
     <div class="wrap final-grid">
       <div>
-        <h2>Připravíme poukazy pro Global Travel</h2>
-        <p>Napište počet a hodnotu, ozveme se s nabídkou.</p>
-        <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Re%3A%20N%C3%A1pad%20na%20firemn%C3%AD%20d%C3%A1rky%20pro%20Global%20Travel">Probrat možnosti pro naši firmu</a>
-        <p class="kontakt-radek">Nebo napište na <a href="mailto:ondrej.hejduk@dreamrental.eu">ondrej.hejduk@dreamrental.eu</a></p>
-        <p class="podpis">Tým DREAMRENTAL</p>
+        <h2>Kolik poukazů pro Global Travel připravíme?</h2>
+        <p>Napište nám počet a hodnotu poukazů. Pošleme nabídku a návrh poukazu s vaším logem. Hotové poukazy dodáme do 3 dnů.</p>
+        <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Poukazy%20pro%20Global%20Travel">Chci nabídku pro náš tým</a>
+        <small>Nebo zavolejte obchodnímu oddělení: +420 778 082 831</small>
       </div>
       <img src="../img/hero/gift-cloud.webp" alt="" loading="lazy">
     </div>
@@ -531,7 +553,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
 <footer>
   <div class="wrap">
     <span>DREAMRENTAL · ADDICTESTATE GROUP s.r.o., IČO 19254598, Kladenská 542/38, 160 00 Praha 6</span>
-    <span>obchod@dreamrental.eu · <a href="https://dreamrental.eu">dreamrental.eu</a></span>
+    <span>obchod@dreamrental.eu · +420 778 082 831 · <a href="https://dreamrental.eu">dreamrental.eu</a></span>
   </div>
 </footer>
 
