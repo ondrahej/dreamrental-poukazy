@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vánoční poukazy pro BUSINESS Systems · DREAMRENTAL</title>
+<meta name="description" content="Vánoční poukazy na den za volantem Tesly Cybertruck, Porsche nebo Mercedesu. S logem vaší firmy, na fakturu, s platností 12 měsíců.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap">
+<style>
+/* Layout: noční zimní nebe nahoře (auto jako dárek s mašlí), pod ním světlé nebe Dreamrental s kartami-dárky převázanými zlatou stuhou. */
+:root{
+  --night:#121a33;      /* zimní noční nebe */
+  --dusk:#2d3f72;       /* soumrak pod mraky */
+  --sky:#eef4fc;        /* světlé nebe Dreamrental */
+  --sky-deep:#d4e0f8;   /* modrá z webu */
+  --ink:#1b2236;        /* text, s nádechem do modra */
+  --ink-soft:#56607a;
+  --gold:#c9973f;       /* stuha */
+  --gold-light:#f1d58e;
+  --berry:#a8243a;      /* provázek visačky, drobné akcenty */
+  --paper:#ffffff;
+  --line:#dbe3f1;
+
+  --f-display:"Outfit", "Inter", system-ui, sans-serif;
+  --f-body:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-hand:"Caveat", "Segoe Print", "Comic Sans MS", cursive;
+
+  --s1:clamp(2.4rem, 5.2vw + 1rem, 4.6rem);
+  --s2:clamp(1.8rem, 2.4vw + 1rem, 2.75rem);
+  --s3:1.375rem;
+  --s4:1.0625rem;
+  --s5:.875rem;
+  --r:18px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sky);color:var(--ink);font:400 var(--s4)/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.eyebrow{font:600 var(--s5)/1.3 var(--f-body);letter-spacing:.12em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:1rem 1.6rem;border-radius:999px;font:600 1rem/1 var(--f-display);text-decoration:none;transition:transform .2s ease, box-shadow .2s ease}
+.btn-gold{background:linear-gradient(180deg,var(--gold-light),var(--gold));color:var(--night);box-shadow:0 10px 30px -10px rgba(201,151,63,.8)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(201,151,63,.9)}
+.btn-ghost{color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn:focus-visible,.faq summary:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;overflow:clip;color:#fff;background:
+  radial-gradient(1200px 500px at 70% 105%, rgba(212,224,248,.55), transparent 60%),
+  linear-gradient(180deg,var(--night) 0%,#1b2750 55%,var(--dusk) 100%)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-bar{position:relative;padding-block:22px}
+.hero-bar img{height:48px;width:auto;filter:brightness(0) invert(1)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:32px;padding-block:24px clamp(40px,5vw,70px)}
+.ground{position:absolute;left:0;bottom:-1px;width:100%;height:clamp(90px,11vw,170px);display:block}
+.hero .eyebrow{color:var(--gold-light)}
+.hero h1{font-size:var(--s1);font-weight:700;line-height:1.02;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--gold-light)}
+.hero-lead{margin-top:22px;max-width:34ch;font-size:1.15rem;color:rgba(255,255,255,.82)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.stars{text-decoration:none;display:flex;align-items:center;gap:10px;margin-top:26px;font-size:var(--s5);color:rgba(255,255,255,.75)}
+.stars b{color:#fff;font-weight:600}
+.stars span{color:var(--gold-light);letter-spacing:2px;font-size:1rem}
+
+.scene{position:relative;z-index:1;align-self:end;aspect-ratio:1.4/1;max-width:600px;justify-self:center;width:100%}
+.scene .glow{position:absolute;left:8%;right:8%;top:8%;bottom:22%;border-radius:50%;background:radial-gradient(closest-side,rgba(241,213,142,.28),rgba(212,224,248,.12) 55%,transparent)}
+.scene .shadow{position:absolute;left:12%;right:10%;bottom:9%;height:10%;border-radius:50%;background:radial-gradient(closest-side,rgba(20,28,58,.55),rgba(20,28,58,0))}
+.scene .truck{position:absolute;left:6%;width:88%;bottom:11%;filter:drop-shadow(0 18px 18px rgba(10,16,40,.35))}
+.scene .bow{position:absolute;left:33%;width:30%;bottom:43%;filter:drop-shadow(0 8px 10px rgba(10,16,40,.35));transform-origin:50% 80%;animation:bow 4s ease-in-out infinite}
+@keyframes bow{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+.tag{position:absolute;margin:0;background:#fffaf0;color:var(--ink);font-family:var(--f-hand);line-height:1.1;padding:10px 16px 10px 36px;border-radius:6px 14px 14px 6px;box-shadow:0 10px 24px -8px rgba(0,0,0,.35);clip-path:polygon(16px 0,100% 0,100% 100%,16px 100%,0 22px)}
+.tag::before{content:"";position:absolute;left:18px;top:18px;width:8px;height:8px;border-radius:50%;background:var(--night);box-shadow:inset 0 0 0 2px var(--gold)}
+.scene .branch{position:absolute;right:-8%;top:-30%;width:85%;overflow:visible;filter:drop-shadow(0 10px 14px rgba(5,9,25,.45))}
+.scene .hang{position:absolute;left:69.8%;top:-20.7%;width:0;height:0;transform-origin:0 0;animation:swing 5s ease-in-out infinite}
+.scene .cord{position:absolute;left:-1px;top:0;width:2px;height:clamp(40px,7vw,78px);background:var(--berry)}
+.scene .tag{left:-22px;top:clamp(40px,7vw,78px);margin-top:-22px;white-space:nowrap;transform-origin:22px 22px;transform:rotate(14deg);font-size:1.4rem}
+.scene .tag small{display:block;font-size:1.02rem;color:var(--ink-soft)}
+@keyframes swing{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+
+/* ---------- SEKCE ---------- */
+section{padding-block:88px}
+.head{max-width:44rem;margin:0 auto 48px;text-align:center}
+.head .eyebrow{color:var(--gold)}
+.head h2{font-size:var(--s2);font-weight:700;line-height:1.1;margin-top:12px}
+.head p{margin:14px auto 0;color:var(--ink-soft);max-width:60ch}
+
+/* Dárky */
+.gifts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.18fr) minmax(0,1fr);gap:26px;align-items:end}
+.gift{min-width:0;position:relative;background:var(--paper);border-radius:var(--r);box-shadow:0 30px 60px -36px rgba(27,34,54,.45);display:flex;flex-direction:column;padding-top:20px}
+.gift .lid{position:absolute;left:0;right:0;top:0;height:20px;border-radius:var(--r) var(--r) 0 0;background:linear-gradient(90deg,transparent calc(50% - 14px),var(--gold) calc(50% - 14px),var(--gold-light) 50%,var(--gold) calc(50% + 14px),transparent calc(50% + 14px)),var(--sky-deep)}
+.gift .knot{position:absolute;top:-30px;left:50%;width:84px;margin-left:-42px}
+.gift .pic{margin:22px 18px 0;border-radius:12px;background:linear-gradient(180deg,var(--sky) 0%,#fff 100%);aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden}
+.gift .pic img{width:88%}
+.gift .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.gift h3{font-size:var(--s3);font-weight:600;line-height:1.2}
+.gift .sub{color:var(--ink-soft);font-size:.95rem}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}
+.spec div{background:var(--sky);border-radius:10px;padding:8px 12px}
+.spec dt{font:600 .68rem/1.2 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.spec dd{margin:3px 0 0;font:700 1.05rem/1.15 var(--f-display);color:var(--ink);font-variant-numeric:tabular-nums}
+.price .dph{flex-basis:100%;font-size:.8rem;color:var(--ink-soft)}
+.price{margin-top:auto;padding-top:14px;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;border-top:1px dashed var(--line)}
+.price s{color:var(--ink-soft);font-size:.95rem}
+.price strong{font:700 1.7rem/1 var(--f-display);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.price em{font:700 1.25rem/1 var(--f-hand);color:var(--berry);font-style:normal}
+.gift.star{background:var(--night);color:#fff;padding-top:24px;box-shadow:0 40px 80px -36px rgba(18,26,51,.8)}
+.gift.star .lid{height:24px;background:linear-gradient(90deg,transparent calc(50% - 16px),var(--gold) calc(50% - 16px),var(--gold-light) 50%,var(--gold) calc(50% + 16px),transparent calc(50% + 16px)),#24315e}
+.gift.star .pic{background:radial-gradient(circle at 50% 70%,#3a4e8a 0%,#1b2750 70%)}
+.gift.star .sub,.gift.star .price s,.gift.star .price .dph{color:rgba(255,255,255,.7)}
+.gift.star .spec div{background:rgba(255,255,255,.08)}
+.gift.star .spec dt{color:rgba(255,255,255,.65)}
+.gift.star .spec dd{color:#fff}
+.gift.star .price{border-color:rgba(255,255,255,.18)}
+.gift.star .price em{color:var(--gold-light)}
+.badge{align-self:flex-start;font:600 .75rem/1 var(--f-body);letter-spacing:.1em;text-transform:uppercase;padding:7px 11px;border-radius:999px;background:var(--gold-light);color:var(--night)}
+.more{max-width:900px;margin:34px auto 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.6)}
+.more p{max-width:52ch}
+.more b{font-family:var(--f-display);font-weight:600}
+.note{text-align:center;margin-top:14px;font-size:var(--s5);color:var(--ink-soft)}
+
+/* Proč */
+.why{background:var(--paper)}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 40px}
+.why-item{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.why-item svg{width:44px;height:44px}
+.why-item h3{font-size:1.125rem;font-weight:600}
+.why-item p{color:var(--ink-soft);font-size:.975rem;margin-top:4px}
+
+/* Flotila */
+.fleet{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.car{background:var(--paper);border-radius:14px;padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line)}
+.car .ph{aspect-ratio:16/9;display:grid;place-items:center}
+.car h3{font-size:1.05rem;font-weight:600;line-height:1.25}
+.car h3 span{display:block;font:500 var(--s5)/1.3 var(--f-body);color:var(--ink-soft)}
+.car .spec{margin-top:auto;gap:6px}
+.car .spec div{padding:6px 10px}
+.car .spec dd{font-size:.95rem}
+
+/* Postup */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;counter-reset:k}
+.step{position:relative;padding:28px 26px;background:var(--paper);border-radius:var(--r);border:1px solid var(--line)}
+.step::before{counter-increment:k;content:counter(k);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sky-deep);font:700 1.1rem/1 var(--f-display);margin-bottom:16px}
+.step h3{font-size:1.15rem;font-weight:600}
+.step p{color:var(--ink-soft);margin-top:6px;font-size:.975rem}
+
+/* FAQ */
+.faq{max-width:780px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;position:relative;font:600 1.08rem/1.35 var(--f-display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font:400 1.6rem/1 var(--f-display);color:var(--gold)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 0 20px;color:var(--ink-soft);max-width:62ch}
+
+/* Závěr */
+.final{position:relative;overflow:hidden;color:#fff;text-align:left;background:linear-gradient(160deg,var(--night),#24315e)}
+.final-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;max-width:980px}
+.final h2{font-size:var(--s2);font-weight:700;line-height:1.1}
+.final p{margin-top:14px;color:rgba(255,255,255,.8);max-width:46ch}
+.final .btn{margin-top:28px}
+.final img{width:100%;max-width:340px;justify-self:center;filter:drop-shadow(0 20px 30px rgba(0,0,0,.35))}
+.final small{display:block;margin-top:16px;color:rgba(255,255,255,.6);font-size:var(--s5)}
+
+
+/* Ukázka poukazu */
+.vsec{padding-top:24px}
+.voucher{position:relative;max-width:920px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 230px;border-radius:22px;overflow:hidden;color:#fff;background:radial-gradient(600px 300px at 15% 0%,#2d3f72,transparent 70%),linear-gradient(140deg,#121a33,#1e2b55);box-shadow:0 40px 80px -40px rgba(18,26,51,.7);
+  -webkit-mask:radial-gradient(circle 16px at 0 50%,transparent 15.5px,#000 16px) left/51% 100% no-repeat,radial-gradient(circle 16px at 100% 50%,transparent 15.5px,#000 16px) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 16px at 0 50%,transparent 15.5px,#000 16px) left/51% 100% no-repeat,radial-gradient(circle 16px at 100% 50%,transparent 15.5px,#000 16px) right/51% 100% no-repeat}
+.v-main{padding:38px 44px 34px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.v-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.v-top img{height:26px;width:auto;filter:brightness(0) invert(1)}
+.v-top span{font:600 .75rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light)}
+.v-what{font:700 clamp(1.7rem,2.6vw + .8rem,2.6rem)/1.05 var(--f-display);letter-spacing:-.02em;margin-top:6px}
+.v-for{font:700 clamp(1.6rem,2vw + 1rem,2.3rem)/1 var(--f-hand);color:var(--gold-light);overflow-wrap:anywhere}
+.v-note{font:600 1.25rem/1.25 var(--f-hand);color:rgba(255,255,255,.75);max-width:34ch}
+.v-meta{margin-top:auto;padding-top:16px;border-top:1px dashed rgba(255,255,255,.22);display:flex;flex-wrap:wrap;gap:8px 26px;font-size:.82rem;color:rgba(255,255,255,.7);font-variant-numeric:tabular-nums}
+.v-meta b{color:#fff;font-weight:600}
+.v-side{position:relative;display:grid;place-items:center;padding:30px 24px;border-left:2px dashed rgba(255,255,255,.18)}
+.v-side::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:30px;margin-left:-15px;background:linear-gradient(90deg,var(--gold),var(--gold-light) 50%,var(--gold))}
+.v-logo{position:relative;width:150px;aspect-ratio:1;border-radius:16px;display:grid;place-items:center;text-align:center;padding:16px;background:rgba(255,255,255,.96);color:var(--ink-soft);font:600 .82rem/1.3 var(--f-body);border:2px dashed #b9c6e2}
+.v-logo b{display:block;font:700 1.15rem/1.1 var(--f-display);color:var(--ink);margin-bottom:6px}
+.v-logo.has-logo{border:0;padding:18px;background:#fff}
+.v-logo.v-name{background:#fff}
+.v-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.v-logo.on-dark{background:#1b2236}
+.v-logo.v-name{border:0}
+.v-logo.v-name b{margin:0;font-size:1.2rem;overflow-wrap:anywhere}
+.v-bow{position:absolute;top:18px;left:50%;width:96px;margin-left:-48px}
+.v-caption{text-align:center;margin-top:18px;color:var(--ink-soft);font-size:var(--s5)}
+
+/* Recenze */
+.reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.review{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:14px}
+.review .st{color:var(--gold);letter-spacing:3px}
+.review blockquote{margin:0;font-size:1rem;line-height:1.6}
+.review footer{padding:0;margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:var(--s5);color:var(--ink-soft)}
+.review footer b{color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:.98rem}
+.review a{color:var(--ink-soft)}
+.all-reviews{display:flex;justify-content:center;margin-top:28px}
+.btn-line{color:var(--ink);border:1px solid var(--line);background:var(--paper)}
+.btn-line:hover{border-color:var(--gold)}
+
+/* Doporučení */
+.tip{background:linear-gradient(120deg,#fff8e8,#fdf1d6);border-block:1px solid #f0dfb3}
+.tip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px 40px;padding-block:44px;text-align:left}
+.tip p{max-width:58ch;font-size:1.1rem}
+.tip b{font-family:var(--f-display);font-weight:700;font-size:1.25rem;display:block;margin-bottom:4px}
+section.tip{padding-block:0}
+/* ---- vánoční ozdoby v těle stránky ---- */
+.head .eyebrow::before,.head .eyebrow::after{content:"";display:inline-block;width:11px;height:11px;margin:0 10px 1px;vertical-align:middle;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9973f' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='M12 2v20M3.3 7l17.4 10M3.3 17l17.4-10M12 5.5l-2.2-2M12 5.5l2.2-2M12 18.5l-2.2 2M12 18.5l2.2 2'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.85}
+#recenze{position:relative;overflow:hidden}
+.svetla{position:absolute;top:0;left:0;width:100%;height:90px;pointer-events:none}
+.svetla .zar{filter:url(#rozmaz);opacity:.45;animation:trpyt 2.6s ease-in-out infinite;animation-delay:var(--z)}
+.svetla .zarovka{animation:zhasni 2.6s ease-in-out infinite;animation-delay:var(--z)}
+@keyframes trpyt{0%,100%{opacity:.5}50%{opacity:.15}}
+@keyframes zhasni{0%,100%{opacity:1}50%{opacity:.72}}
+.tip .wrap{position:relative}
+.cesmina{width:92px;height:auto;flex:none;margin-right:-14px;filter:drop-shadow(0 3px 4px rgba(90,60,10,.18))}
+.final canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.final .wrap{position:relative;z-index:1}
+.banka{position:absolute;top:0;z-index:2;display:flex;flex-direction:column;align-items:center;transform-origin:top center;animation:houpe 6s ease-in-out infinite;pointer-events:none}
+.banka .nit{display:block;width:1.5px;background:linear-gradient(var(--gold-light),var(--gold))}
+.banka svg{width:46px;height:auto;margin-top:-2px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.35))}
+.banka.b1{right:max(24px,calc(50% - 570px))}
+.banka.b2{left:calc(50% + 40px);animation-delay:-2.4s;animation-duration:7s}
+.banka.b2 svg{width:36px}
+@keyframes houpe{0%,100%{transform:rotate(3deg)}50%{transform:rotate(-3deg)}}
+
+
+body > footer{padding-block:34px;font-size:var(--s5);color:var(--ink-soft)}
+body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+
+/* jemné vločky v rozích sekcí uprostřed stránky */
+.vlocky{position:relative;overflow:hidden}
+.vlocky > .wrap{position:relative;z-index:1}
+.vlocky::before,.vlocky::after{content:"";position:absolute;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 -50 100 100' fill='none' stroke='%23c9973f' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath transform='rotate%280%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%2860%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%28120%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%28180%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%28240%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Cpath transform='rotate%28300%29' d='M0 0V-44M0-16L-9-25M0-16L9-25M0-30L-7-37M0-30L7-37'/%3E%3Ccircle r='4.5'/%3E%3C/svg%3E") center/contain no-repeat}
+.vlocky::before{width:190px;height:190px;top:-46px;left:-58px;opacity:.13;transform:rotate(12deg)}
+.vlocky::after{width:70px;height:70px;bottom:36px;right:6%;opacity:.16;transform:rotate(-8deg)}
+.vlocky.vpravo::before{left:auto;right:-58px;transform:rotate(-14deg)}
+.vlocky.vpravo::after{right:auto;left:6%}
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;padding-block:8px 18px}
+  .scene{max-width:440px;margin-top:34%}
+  .gifts{grid-template-columns:1fr;max-width:520px;margin:0 auto;gap:50px}
+  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fleet{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:1fr}
+  .final-grid{grid-template-columns:1fr;text-align:center}
+  .final p{margin-inline:auto}
+  .more{justify-content:center;text-align:center}
+  .hero-grid > div:first-child{text-align:center}
+  .hero-lead{margin-inline:auto}
+  .hero-ctas,.stars{justify-content:center}
+  .final img{max-width:240px}
+  .voucher{grid-template-columns:1fr}
+  .v-side{border-left:0;border-top:2px dashed rgba(255,255,255,.18);padding:56px 24px 30px}
+  .v-side::before{top:0;bottom:auto;left:0;right:0;width:auto;height:26px;margin:0;background:linear-gradient(180deg,var(--gold),var(--gold-light) 50%,var(--gold))}
+  .v-bow{top:-6px}
+  .reviews{grid-template-columns:1fr}
+  .tip .wrap{text-align:center}
+  .cesmina{margin-right:0}
+  .banka.b1{right:18px}
+  .banka.b2{right:auto;left:18px}
+}
+@media (max-width:560px){
+  .vlocky::before{width:120px;height:120px;top:-30px}
+  .vlocky::after{display:none}
+  .v-main{padding:30px 26px 26px}
+  section{padding-block:64px}
+  .why-grid{grid-template-columns:1fr}
+  .scene .tag{font-size:1.05rem;transform:rotate(24deg)}
+  .scene .hang{left:53.5%;top:-12.2%}
+  .scene .branch .oz-1{display:none}
+  .scene .cord{height:34px}
+  .scene .tag{top:34px}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .hero-bar img{height:40px}
+  .car .spec{grid-template-columns:1fr}
+  .car .spec div{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
+  .car .spec dd{margin:0;white-space:nowrap}
+  .banka .nit{height:40px!important}
+  .banka svg{width:34px}
+  .banka.b2 svg{width:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  .scene .bow,.scene .hang,.banka,.svetla .zar,.svetla .zarovka{animation:none}
+  .btn{transition:none}
+  html{scroll-behavior:auto}
+}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:.95rem;color:rgba(255,255,255,.8)}
+.hero-chips span::before{content:"✓ ";color:var(--gold-light);font-weight:700}
+.hero h1{font-size:clamp(2.1rem,3.2vw + 1rem,3.4rem);line-height:1.05}
+.hero-lead{max-width:30ch}
+.scene .tag{font-size:1.2rem}
+.price s{display:none}
+.price em{white-space:nowrap}
+.banka.b3{left:max(24px,calc(50% - 570px));animation-delay:-1.2s;animation-duration:6.5s}
+.kontakt-radek{margin-top:14px;font-size:1rem;opacity:.92}
+.kontakt-radek a{color:inherit;font-weight:600}
+@media(max-width:720px){.banka.b3{left:18px}.hero h1{font-size:clamp(1.9rem,8vw,2.6rem)}}
+.fleet3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:720px){.fleet3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.banka.b1 svg,.banka.b3 svg{width:62px}
+.banka.cerv svg{filter:hue-rotate(335deg) saturate(1.6) drop-shadow(0 10px 14px rgba(0,0,0,.35))}
+.banka.modr svg{filter:hue-rotate(175deg) saturate(1.3) drop-shadow(0 10px 14px rgba(0,0,0,.35))}
+@media(max-width:720px){.banka.b1 svg,.banka.b3 svg{width:44px}}
+.strip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin:0 auto 40px;padding:0;list-style:none;font-weight:600}
+.strip li::before{content:"✓ ";color:var(--gold);font-weight:700}
+.podpis{margin-top:18px;opacity:.85}
+.vic{text-align:center;margin-top:34px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <canvas id="snih" aria-hidden="true"></canvas>
+  <div class="wrap hero-bar"><img src="../img/logo.svg" alt="DREAMRENTAL" width="195" height="59"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Firemní dárky pro BUSINESS Systems</p>
+      <h1>Dárek, který si člověk <em>opravdu užije.</em></h1>
+      <p class="hero-lead">Den za volantem sportovního auta, s vaším logem na poukazu.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" data-cta href="mailto:lucie@dreamrental-poukazy.eu?subject=Re%3A%20N%C3%A1pad%20na%20firemn%C3%AD%20d%C3%A1rky%20pro%20BUSINESS%20Systems">Probrat možnosti pro naši firmu</a>
+        <a class="btn btn-ghost" href="#ukazka">Ukázka poukazu</a>
+      </div>
+      <p class="hero-chips"><span>Vaše logo a věnování</span><span>Faktura na IČO</span><span>Platnost 12 měsíců</span></p>
+      <a class="stars" href="#recenze"><span aria-hidden="true">★★★★★</span><b>4,9</b> ze 155 recenzí na Googlu</a>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <span class="glow"></span>
+      <span class="shadow"></span>
+      <img class="truck" src="../img/auta/tesla-cybertruck.webp" alt="">
+      <svg class="bow" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dd9c"/><stop offset="1" stop-color="#b9862f"/></linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe7b2"/><stop offset="1" stop-color="#c9973f"/></linearGradient>
+        </defs>
+        <path d="M100 70 C70 20 18 18 22 52 C26 82 70 82 100 70Z" fill="url(#g1)"/>
+        <path d="M100 70 C130 20 182 18 178 52 C174 82 130 82 100 70Z" fill="url(#g1)"/>
+        <path d="M100 70 C80 40 44 38 46 54 C48 68 78 72 100 70Z" fill="#a8772a" opacity=".45"/>
+        <path d="M100 70 C120 40 156 38 154 54 C152 68 122 72 100 70Z" fill="#a8772a" opacity=".45"/>
+        <path d="M92 72 L60 118 L76 112 L84 120 L100 78Z" fill="url(#g2)"/>
+        <path d="M108 72 L140 118 L124 112 L116 120 L100 78Z" fill="url(#g2)"/>
+        <ellipse cx="100" cy="70" rx="16" ry="13" fill="url(#g2)"/>
+      </svg>
+      <svg class="branch" viewBox="0 0 600 260" overflow="visible" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="bz" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fbe7b2"/><stop offset=".55" stop-color="#c9973f"/><stop offset="1" stop-color="#8a6420"/></radialGradient><radialGradient id="bv" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#e2697c"/><stop offset=".55" stop-color="#a8243a"/><stop offset="1" stop-color="#5e1020"/></radialGradient></defs><path d="M800 -170Q430 30 30 150M545 -43Q555 7 515 67M384 26Q354 71 289 111M651 -93Q691 -53 711 2M205 93Q155 83 95 63" fill="none" stroke="#3d2a1c" stroke-width="5" stroke-linecap="round"/><path d="M777.8 -158.1Q774.4 -135.0 770.3 -118.5M777.8 -158.1Q759.1 -167.9 745.1 -173.6M768.8 -153.3Q763.7 -132.4 758.2 -117.6M768.8 -153.3Q744.7 -161.7 726.1 -166.2M759.9 -148.6Q755.6 -129.3 750.7 -115.9M759.9 -148.6Q739.8 -158.4 724.6 -164.1M751.0 -143.9Q747.6 -120.6 743.6 -103.9M751.0 -143.9Q730.5 -157.8 715.0 -166.7M742.0 -139.2Q740.5 -117.3 737.9 -101.8M742.0 -139.2Q725.4 -149.8 713.1 -156.0M733.1 -134.6Q732.7 -112.7 731.1 -97.2M733.1 -134.6Q714.8 -142.6 701.2 -146.8M724.1 -130.0Q719.1 -109.9 713.7 -95.9M724.1 -130.0Q703.3 -138.5 687.5 -143.0M715.1 -125.4Q709.5 -103.2 703.7 -87.5M715.1 -125.4Q697.3 -136.5 683.9 -143.2M706.1 -120.8Q699.7 -97.0 693.3 -79.9M706.1 -120.8Q687.3 -129.6 673.1 -134.4M697.1 -116.2Q692.2 -94.4 686.9 -79.0M697.1 -116.2Q677.3 -126.5 662.4 -132.4M688.1 -111.7Q683.8 -92.2 679.1 -78.8M688.1 -111.7Q669.6 -122.2 655.6 -128.3M679.1 -107.2Q674.0 -85.1 668.5 -69.5M679.1 -107.2Q661.2 -115.6 647.8 -120.0M670.1 -102.7Q667.5 -82.6 664.2 -68.5M670.1 -102.7Q651.9 -109.9 638.2 -113.4M661.1 -98.2Q660.2 -75.9 658.4 -60.1M661.1 -98.2Q642.4 -111.0 628.4 -118.9M652.0 -93.8Q648.2 -71.6 643.9 -55.9M652.0 -93.8Q633.3 -106.6 619.2 -114.5M643.0 -89.4Q638.4 -67.8 633.5 -52.5M643.0 -89.4Q624.0 -100.2 609.7 -106.5M633.9 -85.0Q627.9 -64.2 621.8 -49.7M633.9 -85.0Q614.1 -95.0 599.1 -100.8M624.9 -80.6Q618.7 -59.4 612.4 -44.5M624.9 -80.6Q605.0 -89.7 589.9 -94.8M615.8 -76.3Q611.7 -58.7 607.1 -46.8M615.8 -76.3Q598.3 -87.0 585.2 -93.2M606.7 -72.0Q601.7 -52.4 596.3 -38.9M606.7 -72.0Q588.0 -81.6 573.9 -87.1M597.6 -67.7Q595.6 -45.3 592.7 -29.5M597.6 -67.7Q580.6 -76.0 567.9 -80.4M588.5 -63.4Q583.5 -41.9 578.1 -26.7M588.5 -63.4Q568.8 -71.5 553.8 -75.7M579.4 -59.1Q574.0 -41.7 568.4 -30.0M579.4 -59.1Q563.0 -67.1 550.7 -71.2M570.3 -54.9Q567.9 -32.5 564.8 -16.6M570.3 -54.9Q554.5 -62.4 542.7 -66.1M561.2 -50.7Q558.5 -30.7 555.1 -16.9M561.2 -50.7Q540.9 -59.5 525.4 -64.2M552.1 -46.5Q548.6 -24.8 544.6 -9.5M552.1 -46.5Q533.7 -59.0 519.8 -66.8M542.9 -42.3Q539.7 -21.7 535.9 -7.3M542.9 -42.3Q527.0 -54.5 515.1 -62.0M533.8 -38.2Q531.9 -19.3 529.3 -6.4M533.8 -38.2Q517.6 -49.3 505.5 -55.9M524.6 -34.1Q519.6 -13.8 514.4 0.3M524.6 -34.1Q506.9 -45.9 493.6 -53.0M515.4 -30.0Q514.1 -12.6 512.0 -0.9M515.4 -30.0Q497.3 -40.8 483.6 -47.2M506.3 -25.9Q500.5 -5.8 494.7 8.1M506.3 -25.9Q488.9 -34.5 475.9 -39.0M497.1 -21.9Q492.4 -1.8 487.4 12.0M497.1 -21.9Q479.6 -29.8 466.4 -33.8M487.9 -17.8Q483.0 0.3 477.9 12.7M487.9 -17.8Q472.8 -29.3 461.5 -36.2M478.7 -13.8Q477.1 3.3 474.8 14.7M478.7 -13.8Q462.8 -22.6 450.9 -27.2M469.5 -9.9Q463.8 8.0 458.1 20.0M469.5 -9.9Q453.9 -19.1 442.2 -24.2M460.2 -5.9Q457.0 12.6 453.3 25.2M460.2 -5.9Q442.8 -15.0 429.6 -19.9M451.0 -2.0Q445.0 17.9 439.1 31.7M451.0 -2.0Q433.0 -10.6 419.3 -15.1M441.8 1.9Q436.2 17.8 430.7 28.3M441.8 1.9Q425.4 -6.2 413.0 -10.3M432.5 5.8Q427.9 21.3 423.1 31.5M432.5 5.8Q416.8 -4.1 405.1 -9.7M423.3 9.7Q421.6 25.9 419.2 36.7M423.3 9.7Q409.3 -0.6 398.9 -6.6M414.0 13.5Q410.7 32.8 406.9 46.1M414.0 13.5Q399.9 4.9 389.3 0.4M404.7 17.3Q401.4 36.6 397.6 49.8M404.7 17.3Q387.8 6.6 375.0 0.3M395.5 21.1Q392.3 39.9 388.8 52.8M395.5 21.1Q380.8 9.5 369.8 2.5M386.2 24.9Q381.6 41.7 376.8 52.9M386.2 24.9Q372.7 15.4 362.7 10.3M376.9 28.6Q373.2 45.2 369.2 56.3M376.9 28.6Q361.1 16.9 349.2 9.7M367.6 32.4Q362.7 48.5 357.7 59.2M367.6 32.4Q353.9 21.2 343.7 14.5M358.3 36.1Q356.4 53.9 353.8 66.0M358.3 36.1Q346.1 26.7 337.2 21.6M348.9 39.7Q343.6 55.9 338.2 66.6M348.9 39.7Q334.4 30.5 323.5 25.5M339.6 43.4Q334.4 60.5 329.1 71.9M339.6 43.4Q326.5 33.3 316.7 27.5M330.3 47.0Q323.8 64.4 317.6 76.0M330.3 47.0Q315.6 38.5 304.7 34.1M320.9 50.6Q318.7 68.7 315.9 80.9M320.9 50.6Q308.0 42.0 298.5 37.5M311.5 54.2Q307.7 69.3 303.5 79.1M311.5 54.2Q296.1 43.6 284.4 37.5M302.2 57.8Q299.2 74.6 295.9 85.8M302.2 57.8Q288.4 48.0 278.1 42.5M292.8 61.3Q290.2 79.2 287.1 91.2M292.8 61.3Q278.4 53.4 267.5 49.5M283.4 64.8Q279.5 81.1 275.3 91.9M283.4 64.8Q272.3 55.4 264.1 50.3M274.0 68.3Q271.4 83.1 268.2 92.6M274.0 68.3Q260.0 59.2 249.5 54.4M264.6 71.8Q261.2 89.2 257.4 100.9M264.6 71.8Q250.5 64.0 239.9 60.2M255.2 75.2Q249.9 90.8 244.5 100.9M255.2 75.2Q243.4 65.9 234.7 60.8M245.8 78.7Q241.8 92.3 237.6 100.8M245.8 78.7Q232.7 67.0 223.0 60.1M236.4 82.0Q233.7 99.1 230.7 110.5M236.4 82.0Q224.5 73.9 215.7 69.9M226.9 85.4Q224.2 101.0 221.0 111.2M226.9 85.4Q215.6 78.0 207.2 74.5M217.5 88.8Q215.2 104.7 212.3 115.1M217.5 88.8Q207.0 79.8 199.3 75.0M208.0 92.1Q202.3 106.7 196.7 116.0M208.0 92.1Q196.2 84.5 187.3 80.8M198.6 95.4Q194.4 109.3 190.1 118.1M198.6 95.4Q185.8 85.9 176.2 80.6M189.1 98.7Q186.2 114.7 182.9 125.1M189.1 98.7Q177.3 89.3 168.5 84.2M179.6 102.0Q176.0 118.3 172.2 129.1M179.6 102.0Q170.0 92.7 163.0 87.7M170.1 105.2Q167.5 118.5 164.4 126.9M170.1 105.2Q160.6 96.2 153.6 91.4M160.6 108.4Q157.3 121.6 153.7 129.9M160.6 108.4Q148.1 98.8 138.7 93.5M151.1 111.6Q148.8 125.4 146.0 134.1M151.1 111.6Q140.5 104.5 132.6 101.3M141.6 114.8Q136.2 129.9 130.9 139.7M141.6 114.8Q130.2 104.7 121.8 99.0M132.1 117.9Q129.4 132.0 126.4 141.0M132.1 117.9Q122.8 109.5 116.0 105.3M122.6 121.0Q117.6 133.3 112.7 140.7M122.6 121.0Q110.0 111.6 100.5 106.5M113.0 124.1Q110.8 136.6 108.2 144.2M113.0 124.1Q103.0 116.1 95.7 112.2M103.5 127.2Q99.2 141.2 94.8 150.0M103.5 127.2Q92.7 116.6 84.7 110.5M93.9 130.3Q90.3 143.4 86.4 151.5M93.9 130.3Q82.2 122.4 73.5 118.6M84.3 133.3Q80.0 145.6 75.7 153.0M84.3 133.3Q72.1 124.5 62.8 120.0M74.8 136.3Q70.4 147.5 65.9 154.1M74.8 136.3Q65.5 128.4 58.8 124.6M65.2 139.3Q62.7 152.3 59.9 160.3M65.2 139.3Q55.7 130.3 48.8 125.5M55.6 142.2Q53.1 156.3 50.2 165.2M55.6 142.2Q46.6 134.3 40.1 130.4M46.0 145.2Q43.1 158.4 39.9 166.6M46.0 145.2Q36.3 137.0 29.1 133.0M545.5 -40.2Q563.6 -34.2 575.7 -28.9M545.5 -40.2Q534.4 -27.6 528.1 -17.6M545.8 -38.2Q563.9 -28.0 575.9 -19.2M545.8 -38.2Q530.7 -26.6 521.1 -17.5M546.1 -36.2Q563.7 -28.6 575.3 -22.1M546.1 -36.2Q531.0 -22.8 521.4 -12.2M546.3 -34.1Q565.4 -26.4 578.3 -19.8M546.3 -34.1Q532.2 -23.2 523.3 -14.5M546.5 -32.0Q560.9 -21.9 569.9 -13.3M546.5 -32.0Q533.2 -19.3 524.9 -9.1M546.7 -30.0Q563.6 -22.3 574.8 -15.8M546.7 -30.0Q531.1 -18.6 521.1 -9.4M546.8 -27.9Q564.2 -18.8 575.7 -11.3M546.8 -27.9Q531.4 -18.4 521.6 -10.7M546.9 -25.8Q559.6 -16.7 567.3 -9.1M546.9 -25.8Q531.5 -14.9 521.6 -6.0M546.9 -23.7Q561.0 -14.1 569.8 -6.1M546.9 -23.7Q534.0 -13.2 526.2 -4.7M546.9 -21.6Q562.8 -11.1 573.1 -2.6M546.9 -21.6Q533.1 -14.2 524.5 -8.2M546.9 -19.5Q560.0 -12.0 568.0 -6.0M546.9 -19.5Q532.1 -11.5 522.7 -4.9M546.8 -17.4Q559.7 -6.3 567.5 2.6M546.8 -17.4Q533.8 -7.9 525.9 0.0M546.7 -15.2Q558.7 -5.5 565.8 2.2M546.7 -15.2Q533.1 -8.9 524.6 -3.5M546.5 -13.1Q558.7 -4.1 566.0 3.0M546.5 -13.1Q531.8 -3.6 522.4 4.4M546.3 -11.0Q558.9 0.7 566.5 10.0M546.3 -11.0Q532.3 -4.1 523.5 1.8M546.0 -8.8Q558.1 2.4 565.3 11.2M546.0 -8.8Q532.9 -1.0 524.9 5.6M545.8 -6.7Q557.1 5.1 563.6 14.4M545.8 -6.7Q532.5 2.1 524.3 9.7M545.4 -4.5Q556.1 5.7 562.1 13.5M545.4 -4.5Q530.9 2.4 521.8 8.4M545.1 -2.3Q556.6 6.7 563.3 13.6M545.1 -2.3Q531.4 5.1 522.9 11.6M544.6 -0.1Q554.7 11.7 560.3 20.9M544.6 -0.1Q530.9 7.9 522.3 15.1M544.2 2.1Q553.0 13.0 557.6 21.4M544.2 2.1Q530.9 6.3 522.8 10.3M543.7 4.3Q554.2 14.1 560.1 21.5M543.7 4.3Q530.2 9.4 521.8 14.2M543.2 6.5Q551.6 17.8 555.9 26.4M543.2 6.5Q530.1 10.2 522.1 13.9M542.6 8.7Q552.9 20.9 558.7 30.2M542.6 8.7Q529.8 12.2 521.9 15.8M542.0 10.9Q550.3 21.2 554.5 28.9M542.0 10.9Q528.6 14.5 520.2 18.1M541.3 13.1Q549.7 24.4 554.0 32.7M541.3 13.1Q528.5 18.8 520.7 24.2M540.6 15.4Q550.6 25.8 556.1 33.6M540.6 15.4Q528.0 19.6 520.3 23.9M539.9 17.6Q547.8 29.3 551.7 37.9M539.9 17.6Q526.9 22.3 518.8 27.1M539.1 19.9Q546.1 31.1 549.2 39.4M539.1 19.9Q526.2 24.1 518.2 28.4M538.3 22.2Q546.5 31.4 550.7 38.0M538.3 22.2Q524.4 24.6 515.6 27.5M537.4 24.4Q544.7 34.2 548.1 41.3M537.4 24.4Q523.7 29.0 515.1 33.8M536.5 26.7Q542.6 37.7 545.1 45.6M536.5 26.7Q524.1 30.2 516.6 34.1M535.6 29.0Q543.6 41.1 547.7 49.9M535.6 29.0Q523.0 30.1 515.3 32.1M534.6 31.3Q542.3 41.2 546.1 48.1M534.6 31.3Q522.2 33.9 514.5 37.2M533.6 33.6Q539.6 45.7 542.1 54.5M533.6 33.6Q519.9 35.7 511.3 38.5M532.5 35.9Q537.7 47.3 539.6 55.5M532.5 35.9Q520.3 37.9 512.7 40.6M531.4 38.3Q537.3 50.1 539.7 58.6M531.4 38.3Q519.0 38.6 511.2 40.0M530.2 40.6Q537.0 51.7 540.1 59.6M530.2 40.6Q516.6 42.8 507.8 45.9M529.0 42.9Q534.4 53.6 536.3 61.2M529.0 42.9Q518.4 44.7 512.0 47.5M527.8 45.3Q533.9 56.3 536.5 64.1M527.8 45.3Q516.2 46.9 509.1 49.5M526.5 47.6Q533.0 58.6 535.8 66.2M526.5 47.6Q514.9 48.4 507.7 50.4M525.2 50.0Q529.7 60.2 531.0 67.2M525.2 50.0Q514.8 51.6 508.7 54.3M523.9 52.4Q528.0 63.1 529.0 70.5M523.9 52.4Q513.1 54.2 506.6 57.0M522.5 54.8Q527.9 64.5 530.0 71.0M522.5 54.8Q510.7 54.4 503.3 55.5M521.1 57.1Q527.2 67.8 529.9 75.2M521.1 57.1Q510.6 58.1 504.4 60.4M519.6 59.5Q525.0 68.3 527.2 74.1M519.6 59.5Q507.2 60.3 499.4 62.3M518.1 61.9Q521.3 71.1 521.7 77.2M518.1 61.9Q507.6 63.0 501.3 65.4M516.5 64.4Q520.4 74.0 521.3 80.3M516.5 64.4Q504.3 63.7 496.6 64.6M382.1 28.5Q389.2 43.8 392.8 54.7M382.1 28.5Q363.8 29.8 351.1 32.5M380.7 30.4Q387.1 46.5 390.0 58.0M380.7 30.4Q360.9 32.7 346.8 36.1M379.3 32.4Q384.1 51.5 385.9 65.5M379.3 32.4Q363.3 32.4 352.4 34.0M377.9 34.3Q382.9 53.5 384.8 67.6M377.9 34.3Q362.3 35.0 351.6 37.2M376.5 36.2Q381.0 53.4 382.5 65.8M376.5 36.2Q358.8 37.7 346.5 40.6M375.0 38.1Q379.9 56.4 381.8 69.6M375.0 38.1Q355.5 39.2 341.8 41.7M373.5 40.0Q378.4 55.5 380.2 66.4M373.5 40.0Q356.8 37.5 345.3 37.2M371.9 41.9Q374.7 58.1 374.8 69.6M371.9 41.9Q354.0 40.3 341.4 40.7M370.3 43.8Q372.6 60.6 372.3 72.6M370.3 43.8Q354.8 40.5 344.2 39.5M368.7 45.7Q371.4 64.4 371.5 77.9M368.7 45.7Q352.9 45.4 342.0 46.8M367.1 47.6Q372.6 61.9 375.1 71.7M367.1 47.6Q350.0 47.0 338.0 48.2M365.4 49.5Q369.2 65.9 370.3 77.4M365.4 49.5Q348.3 47.6 336.3 47.9M363.7 51.4Q367.0 65.4 367.6 75.0M363.7 51.4Q345.7 48.6 333.1 48.1M361.9 53.3Q366.1 68.1 367.5 78.4M361.9 53.3Q346.3 48.9 335.5 47.1M360.1 55.2Q365.4 71.7 367.8 83.4M360.1 55.2Q342.8 54.4 330.6 55.7M358.3 57.0Q361.1 72.7 361.5 83.6M358.3 57.0Q341.6 54.0 329.9 53.4M356.5 58.9Q360.9 75.0 362.6 86.3M356.5 58.9Q341.5 57.5 331.2 58.3M354.6 60.7Q355.7 74.8 354.7 84.4M354.6 60.7Q341.3 56.6 332.4 55.2M352.7 62.6Q356.8 78.3 358.3 89.2M352.7 62.6Q337.1 60.2 326.3 60.2M350.7 64.5Q351.8 78.0 350.8 87.1M350.7 64.5Q336.6 60.9 326.9 60.1M348.8 66.3Q351.7 80.4 352.3 90.0M348.8 66.3Q334.8 61.9 325.2 60.3M346.7 68.1Q348.2 83.5 347.5 94.1M346.7 68.1Q332.1 63.3 321.9 61.3M344.7 70.0Q346.3 82.8 345.8 91.3M344.7 70.0Q330.1 65.6 320.0 64.1M342.6 71.8Q344.0 85.5 343.4 94.7M342.6 71.8Q330.2 68.3 321.8 67.5M340.5 73.6Q342.7 87.1 342.6 96.1M340.5 73.6Q326.8 70.5 317.4 69.9M338.4 75.5Q341.8 90.9 342.8 101.4M338.4 75.5Q324.3 71.0 314.6 69.4M336.2 77.3Q337.2 91.6 336.2 101.2M336.2 77.3Q322.0 73.6 312.1 72.8M334.0 79.1Q335.7 93.5 335.3 103.2M334.0 79.1Q322.4 74.6 314.6 73.1M331.8 80.9Q334.5 95.5 335.1 105.4M331.8 80.9Q320.2 77.1 312.4 76.1M329.5 82.7Q329.2 96.1 327.2 105.0M329.5 82.7Q315.8 79.2 306.2 78.4M327.2 84.5Q328.2 97.5 327.4 105.9M327.2 84.5Q313.0 81.3 303.0 80.8M324.8 86.3Q326.9 100.7 327.0 110.3M324.8 86.3Q313.8 81.8 306.5 80.3M322.5 88.1Q323.6 101.9 322.9 111.1M322.5 88.1Q311.4 82.8 303.9 80.6M320.1 89.9Q322.1 102.6 322.1 110.9M320.1 89.9Q308.4 86.4 300.5 85.8M317.6 91.6Q316.6 104.9 314.1 113.6M317.6 91.6Q306.7 87.9 299.4 87.0M315.2 93.4Q316.3 105.6 315.7 113.4M315.2 93.4Q303.1 90.5 294.8 90.4M312.7 95.2Q312.7 106.6 311.1 113.8M312.7 95.2Q302.9 90.6 296.5 89.0M310.1 97.0Q311.4 108.6 311.0 115.8M310.1 97.0Q299.5 93.2 292.3 92.3M307.6 98.7Q306.3 111.0 303.7 118.8M307.6 98.7Q296.8 93.0 289.6 90.5M305.0 100.5Q305.4 110.6 304.2 116.7M305.0 100.5Q293.8 94.2 286.2 91.4M302.4 102.2Q302.3 113.4 300.7 120.3M302.4 102.2Q292.6 99.1 286.2 98.9M299.7 104.0Q298.8 114.0 296.6 119.9M299.7 104.0Q290.6 98.8 284.7 96.8M297.0 105.7Q295.7 117.6 293.1 125.0M297.0 105.7Q287.4 100.2 281.1 97.9M294.3 107.5Q292.9 118.8 290.4 125.7M294.3 107.5Q284.1 103.3 277.2 102.1M291.5 109.2Q292.2 119.5 291.3 125.7M291.5 109.2Q281.2 105.0 274.3 103.8M653.2 -90.8Q669.4 -93.8 680.7 -94.4M653.2 -90.8Q649.3 -73.4 648.1 -61.0M655.2 -88.7Q671.2 -91.1 682.3 -91.3M655.2 -88.7Q650.8 -71.6 649.2 -59.4M657.2 -86.6Q672.2 -90.0 682.6 -91.0M657.2 -86.6Q655.2 -68.5 655.6 -55.5M659.1 -84.5Q675.3 -87.4 686.5 -88.0M659.1 -84.5Q656.5 -68.9 656.4 -58.0M661.1 -82.3Q677.7 -82.7 689.2 -81.2M661.1 -82.3Q658.5 -64.3 658.4 -51.4M663.0 -80.2Q679.5 -83.0 690.9 -83.5M663.0 -80.2Q660.2 -65.8 659.9 -55.9M664.8 -78.0Q680.9 -78.4 692.0 -77.1M664.8 -78.0Q660.6 -61.9 659.1 -50.5M666.7 -75.8Q684.5 -75.4 697.0 -73.3M666.7 -75.8Q664.0 -59.7 663.8 -48.3M668.5 -73.5Q682.7 -75.3 692.1 -75.1M668.5 -73.5Q662.9 -57.0 660.5 -45.3M670.3 -71.3Q685.5 -72.4 695.7 -71.6M670.3 -71.3Q666.1 -56.2 664.7 -45.6M672.1 -69.0Q687.7 -71.8 698.4 -72.4M672.1 -69.0Q664.9 -53.2 661.2 -41.8M673.8 -66.7Q689.0 -65.5 699.2 -62.9M673.8 -66.7Q668.1 -50.7 665.6 -39.2M675.6 -64.4Q689.1 -63.4 697.9 -60.9M675.6 -64.4Q669.9 -50.3 667.4 -40.3M677.3 -62.1Q690.4 -60.8 698.9 -58.2M677.3 -62.1Q672.7 -48.5 671.2 -39.0M678.9 -59.8Q693.9 -59.0 703.9 -56.8M678.9 -59.8Q674.2 -46.8 672.6 -37.8M680.6 -57.4Q694.5 -58.5 703.7 -57.8M680.6 -57.4Q674.4 -45.4 671.7 -37.1M682.2 -55.0Q696.7 -56.0 706.3 -55.2M682.2 -55.0Q675.4 -42.8 672.1 -34.3M683.8 -52.6Q696.6 -52.1 704.8 -50.2M683.8 -52.6Q679.0 -39.0 677.3 -29.4M685.3 -50.2Q699.0 -48.1 707.9 -44.9M685.3 -50.2Q681.3 -38.0 680.2 -29.5M686.9 -47.8Q702.0 -46.4 712.1 -43.9M686.9 -47.8Q682.6 -36.1 681.5 -28.0M688.4 -45.3Q701.8 -46.1 710.5 -45.4M688.4 -45.3Q683.9 -33.1 682.5 -24.6M689.9 -42.8Q703.4 -42.1 712.2 -40.1M689.9 -42.8Q685.7 -31.2 684.7 -23.1M691.3 -40.3Q704.6 -40.8 713.0 -39.8M691.3 -40.3Q685.8 -27.4 683.7 -18.1M692.7 -37.8Q705.7 -37.9 713.8 -36.6M692.7 -37.8Q688.1 -24.9 686.8 -15.7M694.1 -35.2Q705.2 -33.5 711.8 -30.8M694.1 -35.2Q687.8 -24.2 685.1 -16.5M695.5 -32.7Q707.7 -31.8 715.2 -29.9M695.5 -32.7Q689.5 -22.0 686.9 -14.5M696.9 -30.1Q710.4 -30.0 719.0 -28.7M696.9 -30.1Q689.9 -20.6 686.6 -14.0M698.2 -27.5Q709.8 -27.4 716.9 -26.1M698.2 -27.5Q691.0 -17.5 687.6 -10.6M699.5 -24.9Q711.4 -22.6 718.7 -19.5M699.5 -24.9Q692.4 -13.5 689.1 -5.5M700.8 -22.2Q713.4 -21.4 721.3 -19.6M700.8 -22.2Q694.8 -11.9 692.4 -4.7M702.0 -19.6Q714.2 -17.0 721.7 -13.7M702.0 -19.6Q694.4 -9.0 690.7 -1.6M703.2 -16.9Q715.4 -15.5 722.9 -13.3M703.2 -16.9Q697.9 -7.7 696.1 -1.3M704.4 -14.2Q716.1 -11.7 723.1 -8.5M704.4 -14.2Q698.6 -6.1 696.3 -0.5M705.6 -11.5Q716.1 -10.6 722.2 -8.8M705.6 -11.5Q698.2 -2.8 694.6 3.2M706.7 -8.7Q718.4 -7.3 725.5 -5.0M706.7 -8.7Q700.8 -0.1 698.4 5.9M707.8 -6.0Q719.0 -4.1 725.6 -1.6M707.8 -6.0Q701.2 2.8 698.2 9.0M708.9 -3.2Q718.8 -2.2 724.3 -0.4M708.9 -3.2Q702.5 4.5 699.8 9.7M710.0 -0.4Q720.3 3.2 726.2 7.1M710.0 -0.4Q704.8 7.4 703.1 12.8M201.5 92.7Q188.4 104.2 178.2 111.0M201.5 92.7Q193.6 75.0 186.6 63.2M198.8 92.2Q186.9 104.9 177.8 112.7M198.8 92.2Q191.0 76.7 184.1 66.8M196.0 91.6Q182.6 102.0 172.1 108.0M196.0 91.6Q188.2 75.3 181.2 64.7M193.3 91.0Q182.1 101.1 173.6 106.7M193.3 91.0Q186.2 78.0 179.8 70.0M190.5 90.4Q177.8 102.5 168.0 109.7M190.5 90.4Q185.4 76.6 180.7 68.0M187.7 89.7Q175.0 99.1 165.2 104.0M187.7 89.7Q183.0 74.1 178.5 64.0M184.9 89.1Q172.7 98.2 163.4 103.1M184.9 89.1Q178.8 74.7 173.1 65.5M182.1 88.4Q171.0 99.6 162.5 106.1M182.1 88.4Q175.3 73.5 169.2 64.0M179.2 87.8Q167.5 98.1 158.6 103.8M179.2 87.8Q174.7 73.1 170.4 63.7M176.4 87.1Q164.7 98.3 155.8 104.9M176.4 87.1Q172.8 72.6 169.2 63.3M173.5 86.4Q163.2 96.2 155.4 101.6M173.5 86.4Q167.9 70.8 162.7 60.7M170.6 85.7Q159.1 97.0 150.4 103.5M170.6 85.7Q164.8 69.8 159.3 59.4M167.7 84.9Q155.8 94.2 146.8 99.1M167.7 84.9Q163.4 71.5 159.3 63.1M164.8 84.2Q152.4 95.1 143.0 101.3M164.8 84.2Q158.8 70.1 153.2 61.2M161.9 83.4Q152.4 92.0 145.4 96.3M161.9 83.4Q158.8 70.2 155.5 62.0M158.9 82.7Q147.7 91.3 139.2 95.7M158.9 82.7Q155.7 69.8 152.4 61.9M156.0 81.9Q145.8 90.6 138.2 95.1M156.0 81.9Q151.1 66.9 146.4 57.3M153.0 81.1Q140.4 89.9 130.9 94.5M153.0 81.1Q149.5 68.9 145.9 61.5M150.0 80.3Q139.5 88.1 131.7 91.8M150.0 80.3Q146.7 66.8 143.3 58.5M147.0 79.4Q136.0 89.1 127.8 94.4M147.0 79.4Q141.8 66.5 136.8 58.6M144.0 78.6Q133.3 86.6 125.4 90.6M144.0 78.6Q138.7 67.3 133.7 60.7M140.9 77.7Q131.5 85.8 124.6 89.7M140.9 77.7Q137.2 64.6 133.4 56.5M137.9 76.9Q128.1 85.2 120.8 89.4M137.9 76.9Q132.2 64.5 126.8 57.1M134.8 76.0Q125.1 84.9 117.9 89.5M134.8 76.0Q132.2 62.2 129.3 53.6M131.8 75.1Q122.8 82.7 116.2 86.3M131.8 75.1Q126.2 62.5 120.9 54.8M128.7 74.1Q118.4 82.8 110.7 87.3M128.7 74.1Q125.7 63.4 122.5 57.1M125.6 73.2Q116.0 80.0 109.0 83.0M125.6 73.2Q123.0 63.0 120.0 57.2M122.4 72.3Q112.0 80.0 104.3 83.8M122.4 72.3Q118.1 60.5 113.7 53.4M119.3 71.3Q110.6 77.3 104.3 79.6M119.3 71.3Q117.5 60.3 115.2 54.0M116.2 70.3Q109.1 77.6 104.2 81.0M116.2 70.3Q112.2 59.2 108.1 52.6M113.0 69.3Q104.5 75.4 98.4 77.8M113.0 69.3Q109.1 58.0 105.0 51.3M109.8 68.3Q101.8 75.3 96.1 78.4M109.8 68.3Q107.4 58.9 104.6 53.8M106.6 67.3Q97.6 74.8 91.0 78.4M106.6 67.3Q104.4 56.6 101.8 50.4M103.4 66.2Q93.9 72.3 87.0 74.7M103.4 66.2Q101.5 55.6 99.1 49.4M100.2 65.2Q90.9 71.0 84.2 73.2M100.2 65.2Q97.7 56.3 94.8 51.7M96.9 64.1Q90.6 70.5 86.3 73.2M96.9 64.1Q95.0 55.0 92.6 50.2" fill="none" stroke="#163a2b" stroke-width="3.2" stroke-linecap="round"/><path d="M777.8 -158.1Q773.4 -140.2 768.5 -128.1M777.8 -158.1Q759.3 -162.6 745.5 -163.9M768.8 -153.3Q760.0 -135.8 751.4 -123.9M768.8 -153.3Q750.9 -160.1 737.5 -163.2M759.9 -148.6Q754.5 -133.4 748.8 -123.4M759.9 -148.6Q742.5 -154.6 729.6 -157.1M751.0 -143.9Q744.9 -128.0 738.6 -117.4M751.0 -143.9Q734.5 -149.1 722.2 -150.9M742.0 -139.2Q737.4 -122.3 732.3 -110.9M742.0 -139.2Q722.5 -142.5 707.8 -142.8M733.1 -134.6Q724.6 -118.3 716.4 -107.4M733.1 -134.6Q713.5 -138.6 698.7 -139.4M724.1 -130.0Q717.1 -116.0 710.2 -106.9M724.1 -130.0Q708.2 -134.0 696.5 -134.8M715.1 -125.4Q707.4 -110.0 699.8 -99.9M715.1 -125.4Q699.7 -131.2 688.3 -133.6M706.1 -120.8Q699.1 -106.0 692.2 -96.3M706.1 -120.8Q690.7 -123.2 679.4 -122.8M697.1 -116.2Q690.3 -100.4 683.5 -89.9M697.1 -116.2Q682.0 -122.0 670.9 -124.3M688.1 -111.7Q682.1 -93.2 675.9 -80.6M688.1 -111.7Q673.2 -114.3 662.1 -114.0M679.1 -107.2Q671.1 -90.4 663.3 -79.0M679.1 -107.2Q664.5 -112.3 653.8 -114.0M670.1 -102.7Q665.9 -87.3 661.3 -77.1M670.1 -102.7Q653.1 -106.8 640.4 -107.7M661.1 -98.2Q655.4 -81.7 649.5 -70.6M661.1 -98.2Q647.2 -104.2 637.0 -106.6M652.0 -93.8Q643.9 -76.5 636.1 -64.8M652.0 -93.8Q634.7 -99.7 621.6 -102.0M643.0 -89.4Q637.8 -71.5 632.3 -59.3M643.0 -89.4Q626.3 -93.6 613.8 -94.6M633.9 -85.0Q629.1 -67.0 624.0 -54.8M633.9 -85.0Q618.1 -90.0 606.4 -91.6M624.9 -80.6Q616.5 -65.8 608.5 -56.2M624.9 -80.6Q608.4 -85.4 596.0 -86.9M615.8 -76.3Q608.3 -60.7 601.1 -50.4M615.8 -76.3Q601.1 -82.4 590.2 -85.0M606.7 -72.0Q601.0 -54.5 595.1 -42.7M606.7 -72.0Q592.3 -75.7 581.7 -76.2M597.6 -67.7Q591.4 -50.4 585.1 -38.7M597.6 -67.7Q581.3 -72.2 569.2 -73.4M588.5 -63.4Q584.2 -47.7 579.5 -37.4M588.5 -63.4Q573.8 -68.3 562.9 -69.8M579.4 -59.1Q573.9 -46.0 568.2 -37.8M579.4 -59.1Q563.1 -62.1 550.9 -62.0M570.3 -54.9Q565.2 -40.9 560.0 -31.9M570.3 -54.9Q554.1 -59.8 541.9 -61.3M561.2 -50.7Q554.9 -34.8 548.6 -24.3M561.2 -50.7Q547.6 -56.0 537.7 -57.8M552.1 -46.5Q545.2 -31.9 538.5 -22.4M552.1 -46.5Q536.3 -51.3 524.5 -52.8M542.9 -42.3Q534.8 -27.0 527.0 -17.0M542.9 -42.3Q528.9 -48.1 518.6 -50.4M533.8 -38.2Q526.2 -24.9 518.9 -16.5M533.8 -38.2Q517.3 -41.3 504.9 -41.3M524.6 -34.1Q517.9 -21.7 511.3 -14.1M524.6 -34.1Q508.3 -40.2 496.0 -42.8M515.4 -30.0Q508.2 -16.3 501.1 -7.5M515.4 -30.0Q501.5 -34.9 491.2 -36.5M506.3 -25.9Q501.7 -10.9 496.9 -1.2M506.3 -25.9Q491.3 -30.9 480.1 -32.5M497.1 -21.9Q491.1 -7.8 485.2 1.2M497.1 -21.9Q480.8 -26.8 468.5 -28.4M487.9 -17.8Q480.6 -4.9 473.5 3.1M487.9 -17.8Q474.5 -21.8 464.7 -22.6M478.7 -13.8Q474.3 -1.3 469.6 6.5M478.7 -13.8Q466.0 -18.8 456.7 -20.3M469.5 -9.9Q463.1 2.3 456.8 9.8M469.5 -9.9Q455.1 -14.5 444.4 -15.8M460.2 -5.9Q455.2 8.7 449.9 18.1M460.2 -5.9Q445.1 -12.5 433.8 -15.4M451.0 -2.0Q446.8 10.9 442.3 18.9M451.0 -2.0Q435.9 -6.9 424.6 -8.4M441.8 1.9Q435.6 17.0 429.5 26.9M441.8 1.9Q428.2 -4.0 418.2 -6.3M432.5 5.8Q426.2 16.9 419.9 23.4M432.5 5.8Q419.7 2.3 410.2 2.0M423.3 9.7Q414.8 23.3 406.9 31.9M423.3 9.7Q409.6 4.8 399.4 3.3M414.0 13.5Q407.0 25.8 400.3 33.3M414.0 13.5Q400.2 9.7 389.9 9.2M404.7 17.3Q399.3 30.2 393.8 38.2M404.7 17.3Q392.5 11.6 383.6 9.4M395.5 21.1Q390.6 34.2 385.6 42.4M395.5 21.1Q381.6 14.9 371.2 12.2M386.2 24.9Q379.0 36.2 372.1 43.0M386.2 24.9Q373.0 18.1 363.2 15.1M376.9 28.6Q372.3 42.6 367.6 51.4M376.9 28.6Q363.0 25.3 352.7 25.0M367.6 32.4Q360.9 43.2 354.5 49.5M367.6 32.4Q353.0 26.8 342.1 24.9M358.3 36.1Q353.9 47.7 349.4 54.7M358.3 36.1Q347.0 30.1 338.8 27.7M348.9 39.7Q344.1 50.9 339.1 57.6M348.9 39.7Q336.7 34.5 327.7 32.8M339.6 43.4Q334.0 53.9 328.5 59.9M339.6 43.4Q326.6 36.7 317.0 33.8M330.3 47.0Q324.2 59.0 318.3 66.2M330.3 47.0Q317.6 40.2 308.1 37.3M320.9 50.6Q316.0 61.7 311.0 68.3M320.9 50.6Q308.0 47.1 298.5 46.7M311.5 54.2Q306.1 66.1 300.7 73.2M311.5 54.2Q299.1 47.4 289.8 44.4M302.2 57.8Q296.4 68.7 290.7 75.2M302.2 57.8Q289.3 52.0 279.8 49.9M292.8 61.3Q286.7 71.0 280.7 76.4M292.8 61.3Q281.7 57.9 273.6 57.7M283.4 64.8Q277.3 76.2 271.4 82.9M283.4 64.8Q270.1 60.8 260.2 60.1M274.0 68.3Q268.5 79.1 263.0 85.3M274.0 68.3Q263.3 62.0 255.4 59.4M264.6 71.8Q258.9 82.8 253.3 89.2M264.6 71.8Q252.3 66.6 243.1 65.0M255.2 75.2Q248.8 85.3 242.6 91.0M255.2 75.2Q243.7 71.4 235.2 70.9M245.8 78.7Q240.6 90.4 235.4 97.5M245.8 78.7Q233.2 73.5 223.9 71.9M236.4 82.0Q230.3 92.4 224.4 98.3M236.4 82.0Q224.1 76.5 215.0 74.6M226.9 85.4Q220.0 96.5 213.4 103.1M226.9 85.4Q215.5 80.3 207.0 78.7M217.5 88.8Q213.4 99.0 209.1 104.8M217.5 88.8Q205.2 84.9 196.0 84.3M208.0 92.1Q201.1 102.9 194.5 109.2M208.0 92.1Q197.1 86.3 189.1 84.1M198.6 95.4Q194.1 107.4 189.5 114.6M198.6 95.4Q186.6 89.3 177.7 86.9M189.1 98.7Q183.9 110.9 178.8 118.4M189.1 98.7Q177.6 92.7 169.0 90.5M179.6 102.0Q174.4 111.5 169.2 116.7M179.6 102.0Q169.7 97.8 162.5 97.0M170.1 105.2Q163.7 114.8 157.6 120.1M170.1 105.2Q160.0 101.6 152.6 101.2M160.6 108.4Q154.8 117.7 149.2 122.8M160.6 108.4Q150.7 103.7 143.4 102.5M151.1 111.6Q145.1 123.1 139.4 129.9M151.1 111.6Q140.4 105.0 132.4 102.2M141.6 114.8Q137.0 124.6 132.4 130.0M141.6 114.8Q132.3 109.9 125.5 108.4M132.1 117.9Q126.4 129.4 120.8 136.2M132.1 117.9Q121.3 111.7 113.3 109.2M122.6 121.0Q118.4 130.4 114.1 135.4M122.6 121.0Q111.5 115.5 103.4 113.5M113.0 124.1Q108.9 133.8 104.8 139.1M113.0 124.1Q103.8 118.5 97.1 116.6M103.5 127.2Q97.6 137.2 92.0 142.8M103.5 127.2Q94.9 122.4 88.7 121.1M93.9 130.3Q86.7 140.1 80.0 145.6M93.9 130.3Q84.2 126.0 77.1 125.1M84.3 133.3Q78.7 143.1 73.2 148.5M84.3 133.3Q74.1 128.0 66.5 126.3M74.8 136.3Q69.7 146.6 64.8 152.3M74.8 136.3Q65.8 132.4 59.2 131.8M65.2 139.3Q59.9 149.0 54.7 154.4M65.2 139.3Q55.7 134.9 48.8 133.9M55.6 142.2Q50.7 152.0 45.9 157.5M55.6 142.2Q46.0 137.7 39.0 136.5M46.0 145.2Q39.8 154.4 33.9 159.3M46.0 145.2Q37.5 140.6 31.4 139.6M545.5 -40.2Q559.0 -30.8 567.4 -22.6M545.5 -40.2Q538.1 -26.8 534.7 -16.3M545.8 -38.2Q557.0 -28.5 563.4 -20.1M545.8 -38.2Q537.1 -25.7 532.6 -15.9M546.1 -36.2Q557.2 -24.6 563.5 -14.9M546.1 -36.2Q538.5 -23.3 535.0 -13.1M546.3 -34.1Q557.3 -25.3 563.6 -17.8M546.3 -34.1Q536.7 -21.5 531.4 -11.5M546.5 -32.0Q556.7 -23.3 562.2 -15.8M546.5 -32.0Q537.9 -19.7 533.5 -9.8M546.7 -30.0Q556.9 -20.2 562.5 -12.0M546.7 -30.0Q536.9 -19.3 531.6 -10.8M546.8 -27.9Q556.6 -17.8 561.9 -9.4M546.8 -27.9Q537.7 -17.2 532.9 -8.6M546.9 -25.8Q558.4 -15.2 565.1 -6.4M546.9 -25.8Q538.0 -14.4 533.4 -5.2M546.9 -23.7Q555.6 -12.0 559.9 -2.3M546.9 -23.7Q538.3 -13.9 534.0 -5.8M546.9 -21.6Q556.7 -10.3 561.9 -1.0M546.9 -21.6Q537.5 -13.2 532.5 -6.3M546.9 -19.5Q554.8 -9.2 558.6 -0.9M546.9 -19.5Q537.4 -9.1 532.4 -0.6M546.8 -17.4Q557.9 -6.7 564.2 1.9M546.8 -17.4Q534.9 -8.0 527.9 -0.2M546.7 -15.2Q557.3 -4.3 563.3 4.5M546.7 -15.2Q537.4 -4.5 532.6 4.4M546.5 -13.1Q556.2 -1.8 561.4 7.3M546.5 -13.1Q538.0 -4.4 533.8 3.0M546.3 -11.0Q555.5 -0.9 560.4 7.0M546.3 -11.0Q536.9 -3.6 532.0 2.7M546.0 -8.8Q553.1 0.4 556.1 7.6M546.0 -8.8Q536.3 -2.1 531.1 3.7M545.8 -6.7Q552.8 5.6 555.9 15.3M545.8 -6.7Q535.4 0.6 529.6 6.9M545.4 -4.5Q553.0 6.4 556.5 15.0M545.4 -4.5Q534.0 2.8 527.4 9.2M545.1 -2.3Q552.2 6.9 555.4 14.0M545.1 -2.3Q533.6 5.1 526.8 11.6M544.6 -0.1Q550.6 11.1 552.8 19.7M544.6 -0.1Q533.8 6.7 527.6 12.9M544.2 2.1Q549.2 13.2 550.6 21.8M544.2 2.1Q533.0 8.1 526.5 13.7M543.7 4.3Q548.7 14.7 550.1 22.7M543.7 4.3Q534.3 10.0 529.2 15.3M543.2 6.5Q548.3 18.0 549.9 26.7M543.2 6.5Q533.4 12.9 528.1 18.9M542.6 8.7Q549.1 17.6 551.8 24.2M542.6 8.7Q531.9 16.3 525.9 23.3M542.0 10.9Q546.5 23.3 547.6 32.7M542.0 10.9Q532.1 17.6 526.6 23.8M541.3 13.1Q548.1 23.3 551.0 30.8M541.3 13.1Q529.9 19.0 523.1 24.6M540.6 15.4Q545.7 26.9 547.3 35.4M540.6 15.4Q531.1 20.2 526.0 25.0M539.9 17.6Q546.3 27.9 549.0 35.4M539.9 17.6Q530.0 24.3 524.6 30.6M539.1 19.9Q543.8 31.4 545.2 40.0M539.1 19.9Q528.6 26.5 522.5 32.9M538.3 22.2Q542.2 32.2 542.9 39.5M538.3 22.2Q529.1 27.8 524.2 33.4M537.4 24.4Q541.2 34.6 541.7 41.8M537.4 24.4Q527.2 30.0 521.4 35.5M536.5 26.7Q540.2 37.5 540.6 45.4M536.5 26.7Q527.4 31.1 522.5 35.7M535.6 29.0Q540.5 38.1 542.1 44.5M535.6 29.0Q525.0 33.0 518.9 37.2M534.6 31.3Q538.4 40.1 539.0 46.2M534.6 31.3Q525.2 35.0 520.1 39.2M533.6 33.6Q536.3 42.6 536.1 48.8M533.6 33.6Q523.2 37.5 517.3 41.9M532.5 35.9Q534.8 45.9 534.2 52.9M532.5 35.9Q524.1 39.5 519.8 43.5M531.4 38.3Q533.9 48.0 533.5 54.8M531.4 38.3Q520.6 42.0 514.3 46.2M530.2 40.6Q533.1 50.0 533.0 56.5M530.2 40.6Q522.0 44.4 517.7 48.7M529.0 42.9Q532.9 51.3 533.7 56.9M529.0 42.9Q519.8 45.8 514.6 49.4M527.8 45.3Q531.0 55.4 531.2 62.5M527.8 45.3Q518.5 47.1 513.3 49.9M526.5 47.6Q530.6 57.4 531.5 64.1M526.5 47.6Q516.9 51.1 511.5 55.2M525.2 50.0Q527.3 58.5 526.7 64.1M525.2 50.0Q517.3 53.0 513.2 56.8M523.9 52.4Q527.0 61.3 527.1 67.3M523.9 52.4Q514.1 55.0 508.5 58.5M522.5 54.8Q524.5 64.4 523.8 70.8M522.5 54.8Q513.1 57.4 507.8 60.9M521.1 57.1Q522.4 65.8 521.2 71.5M521.1 57.1Q512.4 60.3 507.7 64.4M519.6 59.5Q522.1 68.1 521.8 73.6M519.6 59.5Q511.4 60.2 507.1 62.3M518.1 61.9Q519.6 71.1 518.6 77.2M518.1 61.9Q509.7 64.8 505.2 68.5M516.5 64.4Q519.2 73.5 519.1 79.5M516.5 64.4Q507.6 66.4 502.6 69.6M382.1 28.5Q382.9 41.7 381.4 50.9M382.1 28.5Q368.8 32.9 360.2 38.0M380.7 30.4Q381.5 44.9 380.0 55.1M380.7 30.4Q368.1 33.6 360.0 37.8M379.3 32.4Q380.9 46.4 380.0 56.4M379.3 32.4Q364.5 35.1 354.6 39.0M377.9 34.3Q381.0 50.3 381.3 61.7M377.9 34.3Q365.5 37.6 357.5 41.9M376.5 36.2Q376.1 49.2 373.6 58.2M376.5 36.2Q361.2 37.7 350.8 40.5M375.0 38.1Q377.4 53.0 377.2 63.6M375.0 38.1Q360.5 40.9 350.7 44.8M373.5 40.0Q374.1 53.4 372.4 62.7M373.5 40.0Q360.1 41.5 351.3 44.3M371.9 41.9Q373.6 54.7 372.8 63.4M371.9 41.9Q359.9 44.5 352.1 48.2M370.3 43.8Q370.7 56.8 368.9 65.7M370.3 43.8Q357.2 44.1 348.5 46.0M368.7 45.7Q368.9 60.8 367.0 71.3M368.7 45.7Q353.7 46.8 343.4 49.5M367.1 47.6Q367.9 60.6 366.6 69.4M367.1 47.6Q352.4 47.7 342.4 49.5M365.4 49.5Q364.1 63.7 361.1 73.4M365.4 49.5Q352.6 50.8 344.2 53.7M363.7 51.4Q364.2 64.3 362.7 73.0M363.7 51.4Q351.0 53.5 342.6 57.0M361.9 53.3Q362.7 67.9 361.3 77.9M361.9 53.3Q348.1 55.2 338.8 58.6M360.1 55.2Q361.0 68.0 359.7 76.7M360.1 55.2Q348.1 55.0 340.2 56.8M358.3 57.0Q359.3 68.8 358.1 76.5M358.3 57.0Q346.5 57.4 338.8 59.7M356.5 58.9Q356.1 72.7 353.9 82.0M356.5 58.9Q345.6 60.2 338.7 63.1M354.6 60.7Q353.6 74.1 350.9 83.1M354.6 60.7Q343.1 59.4 335.6 60.3M352.7 62.6Q351.1 75.1 347.9 83.4M352.7 62.6Q340.2 63.4 331.9 66.0M350.7 64.5Q350.7 76.5 348.8 84.4M350.7 64.5Q337.3 65.6 328.2 68.5M348.8 66.3Q347.5 77.8 344.6 85.3M348.8 66.3Q336.8 66.2 328.9 68.2M346.7 68.1Q345.1 80.0 341.9 87.6M346.7 68.1Q333.7 68.1 324.8 70.0M344.7 70.0Q343.7 80.9 341.0 87.8M344.7 70.0Q333.4 70.3 325.9 72.5M342.6 71.8Q342.5 84.4 340.5 92.7M342.6 71.8Q332.3 70.2 325.7 70.9M340.5 73.6Q340.5 86.4 338.7 94.8M340.5 73.6Q328.7 73.6 320.8 75.6M338.4 75.5Q338.7 86.5 337.1 93.5M338.4 75.5Q328.4 73.4 322.0 73.8M336.2 77.3Q333.8 89.4 330.2 97.2M336.2 77.3Q326.2 77.4 319.7 79.7M334.0 79.1Q331.8 90.6 328.3 97.9M334.0 79.1Q324.4 78.2 318.3 79.5M331.8 80.9Q329.3 90.9 325.6 96.9M331.8 80.9Q321.6 79.1 314.9 79.7M329.5 82.7Q327.5 92.0 324.2 97.4M329.5 82.7Q319.1 82.2 312.4 84.0M327.2 84.5Q326.8 94.1 324.9 99.8M327.2 84.5Q317.0 83.2 310.3 84.3M324.8 86.3Q323.5 95.3 320.8 100.5M324.8 86.3Q315.8 84.9 310.0 86.0M322.5 88.1Q319.9 97.6 316.2 103.3M322.5 88.1Q311.9 86.7 305.0 87.8M320.1 89.9Q318.3 100.8 315.1 107.6M320.1 89.9Q310.1 88.6 303.6 89.7M317.6 91.6Q315.0 101.2 311.2 106.8M317.6 91.6Q308.1 91.1 302.0 92.9M315.2 93.4Q312.5 102.5 308.7 107.7M315.2 93.4Q305.9 90.8 300.0 90.8M312.7 95.2Q311.2 105.0 308.5 110.8M312.7 95.2Q303.7 94.5 298.0 96.1M310.1 97.0Q307.8 106.6 304.4 112.2M310.1 97.0Q300.2 94.4 293.6 94.5M307.6 98.7Q304.8 107.8 300.9 113.0M307.6 98.7Q297.4 98.1 290.5 99.9M305.0 100.5Q303.8 109.5 301.4 114.7M305.0 100.5Q295.3 99.7 288.8 101.2M302.4 102.2Q300.0 110.5 296.5 115.0M302.4 102.2Q293.2 99.5 287.2 99.6M299.7 104.0Q297.2 113.6 293.6 119.1M299.7 104.0Q290.8 102.2 285.1 103.1M297.0 105.7Q295.5 113.4 292.8 117.4M297.0 105.7Q288.7 103.4 283.3 103.7M294.3 107.5Q291.7 115.9 288.2 120.4M294.3 107.5Q286.1 105.4 280.8 106.0M291.5 109.2Q289.9 117.6 287.1 122.1M291.5 109.2Q283.7 107.7 278.7 108.8M653.2 -90.8Q668.0 -88.2 678.2 -84.2M653.2 -90.8Q651.8 -75.2 652.6 -64.4M655.2 -88.7Q667.8 -88.9 676.1 -87.1M655.2 -88.7Q655.1 -75.4 657.1 -66.4M657.2 -86.6Q670.0 -86.7 678.5 -84.9M657.2 -86.6Q657.0 -71.4 658.8 -60.9M659.1 -84.5Q673.6 -84.9 683.4 -83.4M659.1 -84.5Q660.7 -71.0 663.9 -61.8M661.1 -82.3Q673.5 -80.5 681.7 -77.2M661.1 -82.3Q659.5 -68.5 660.2 -59.0M663.0 -80.2Q677.6 -79.1 687.6 -76.5M663.0 -80.2Q661.0 -67.4 661.5 -58.7M664.8 -78.0Q678.5 -75.9 687.6 -72.4M664.8 -78.0Q664.6 -65.8 666.5 -57.6M666.7 -75.8Q678.2 -74.9 685.6 -72.5M666.7 -75.8Q667.4 -61.4 670.0 -51.3M668.5 -73.5Q681.0 -70.3 689.0 -65.9M668.5 -73.5Q666.6 -60.8 667.2 -52.0M670.3 -71.3Q681.9 -69.7 689.2 -66.7M670.3 -71.3Q670.6 -58.9 672.9 -50.4M672.1 -69.0Q683.5 -66.2 690.6 -62.2M672.1 -69.0Q669.4 -55.6 669.3 -46.3M673.8 -66.7Q686.6 -64.9 694.9 -61.7M673.8 -66.7Q673.8 -54.5 675.9 -46.2M675.6 -64.4Q689.1 -63.2 698.1 -60.6M675.6 -64.4Q673.8 -51.6 674.5 -42.8M677.3 -62.1Q690.6 -60.5 699.4 -57.6M677.3 -62.1Q676.1 -51.7 677.3 -44.8M678.9 -59.8Q690.1 -57.7 697.0 -54.4M678.9 -59.8Q676.1 -49.2 676.1 -42.0M680.6 -57.4Q692.1 -54.1 699.3 -49.9M680.6 -57.4Q679.5 -46.5 680.8 -39.1M682.2 -55.0Q693.6 -51.1 700.8 -46.4M682.2 -55.0Q680.5 -42.5 681.5 -33.8M683.8 -52.6Q695.8 -50.7 703.4 -47.6M683.8 -52.6Q680.9 -41.6 680.9 -34.1M685.3 -50.2Q694.9 -47.7 700.5 -44.2M685.3 -50.2Q681.8 -38.1 681.1 -29.8M686.9 -47.8Q697.7 -43.9 704.2 -39.3M686.9 -47.8Q683.9 -36.0 683.7 -27.9M688.4 -45.3Q697.8 -42.6 703.2 -39.0M688.4 -45.3Q687.2 -35.2 688.5 -28.3M689.9 -42.8Q700.5 -40.7 706.8 -37.5M689.9 -42.8Q688.5 -32.8 689.6 -26.1M691.3 -40.3Q700.7 -36.8 706.0 -32.6M691.3 -40.3Q687.5 -30.5 686.7 -23.8M692.7 -37.8Q703.4 -33.6 709.7 -28.9M692.7 -37.8Q690.4 -28.9 690.9 -22.9M694.1 -35.2Q704.3 -31.3 710.2 -26.7M694.1 -35.2Q692.2 -26.5 693.0 -20.7M695.5 -32.7Q705.4 -29.5 711.0 -25.6M695.5 -32.7Q692.5 -23.2 692.5 -16.7M696.9 -30.1Q705.9 -28.2 710.8 -25.4M696.9 -30.1Q694.6 -20.0 695.2 -13.0M698.2 -27.5Q707.4 -23.3 712.4 -18.7M698.2 -27.5Q695.6 -19.4 696.0 -13.9M699.5 -24.9Q708.6 -22.1 713.6 -18.6M699.5 -24.9Q696.9 -15.9 697.2 -9.7M700.8 -22.2Q710.2 -18.1 715.4 -13.6M700.8 -22.2Q696.6 -13.7 695.6 -7.8M702.0 -19.6Q710.4 -16.6 714.8 -13.0M702.0 -19.6Q697.7 -10.8 696.6 -4.7M703.2 -16.9Q711.4 -14.6 715.6 -11.6M703.2 -16.9Q699.4 -9.7 698.7 -4.9M704.4 -14.2Q713.7 -10.8 718.8 -7.0M704.4 -14.2Q701.0 -6.8 700.6 -1.9M705.6 -11.5Q713.8 -7.5 717.9 -3.1M705.6 -11.5Q702.9 -2.7 703.2 3.4M706.7 -8.7Q715.6 -5.2 720.4 -1.3M706.7 -8.7Q703.8 -1.7 703.9 3.0M707.8 -6.0Q715.9 -3.1 720.0 0.3M707.8 -6.0Q703.6 1.1 702.7 5.9M708.9 -3.2Q717.2 -0.7 721.5 2.3M708.9 -3.2Q705.8 4.5 705.8 9.8M710.0 -0.4Q717.5 2.7 721.0 6.2M710.0 -0.4Q706.4 6.4 706.1 11.0M201.5 92.7Q190.1 101.6 181.2 106.2M201.5 92.7Q192.6 82.5 184.8 76.8M198.8 92.2Q185.9 100.4 175.9 104.5M198.8 92.2Q192.2 79.8 186.3 72.4M196.0 91.6Q183.4 98.1 173.6 100.8M196.0 91.6Q188.2 79.6 181.3 72.4M193.3 91.0Q180.3 98.4 170.3 101.8M193.3 91.0Q184.6 80.0 176.9 73.7M190.5 90.4Q178.5 97.0 169.3 99.8M190.5 90.4Q184.3 80.0 178.7 74.2M187.7 89.7Q177.6 95.7 169.9 98.0M187.7 89.7Q181.0 79.2 174.9 73.3M184.9 89.1Q172.3 95.2 162.6 97.5M184.9 89.1Q179.2 78.3 173.9 72.1M182.1 88.4Q171.1 94.4 162.7 96.5M182.1 88.4Q175.2 78.5 169.0 73.0M179.2 87.8Q169.0 95.1 161.3 98.4M179.2 87.8Q172.3 76.3 166.1 69.6M176.4 87.1Q165.1 93.3 156.5 95.7M176.4 87.1Q171.0 77.5 166.0 72.3M173.5 86.4Q161.3 92.8 152.0 95.3M173.5 86.4Q167.9 75.8 162.7 69.7M170.6 85.7Q160.2 92.4 152.4 95.3M170.6 85.7Q162.7 75.6 155.6 70.0M167.7 84.9Q157.4 90.9 149.6 93.1M167.7 84.9Q162.3 74.5 157.2 68.6M164.8 84.2Q153.4 90.7 144.8 93.4M164.8 84.2Q158.5 73.1 152.7 66.7M161.9 83.4Q151.2 88.9 143.2 90.8M161.9 83.4Q155.8 75.0 150.2 70.8M158.9 82.7Q150.4 88.1 144.1 90.0M158.9 82.7Q153.2 72.1 147.8 66.1M156.0 81.9Q145.3 87.5 137.2 89.5M156.0 81.9Q150.1 73.3 144.6 69.0M153.0 81.1Q143.3 86.0 136.1 87.3M153.0 81.1Q146.7 71.4 140.8 66.1M150.0 80.3Q139.6 85.0 131.9 86.3M150.0 80.3Q145.3 71.6 140.7 67.2M147.0 79.4Q138.2 83.2 131.8 83.6M147.0 79.4Q142.3 70.2 137.7 65.3M144.0 78.6Q134.9 83.2 128.2 84.3M144.0 78.6Q139.3 69.8 134.7 65.2M140.9 77.7Q131.7 83.9 124.8 86.4M140.9 77.7Q136.0 68.9 131.1 64.2M137.9 76.9Q128.3 82.9 121.2 85.2M137.9 76.9Q133.5 68.2 129.1 63.7M134.8 76.0Q126.3 81.3 120.1 83.0M134.8 76.0Q131.2 67.6 127.5 63.4M131.8 75.1Q123.4 80.6 117.3 82.5M131.8 75.1Q126.7 67.8 121.7 64.4M128.7 74.1Q119.5 78.8 112.7 80.0M128.7 74.1Q123.4 64.8 118.3 59.9M125.6 73.2Q117.5 77.7 111.7 78.7M125.6 73.2Q120.3 64.9 115.2 60.7M122.4 72.3Q115.1 76.5 109.8 77.3M122.4 72.3Q118.2 63.1 113.9 58.3M119.3 71.3Q111.6 74.4 106.1 74.4M119.3 71.3Q114.1 62.8 109.1 58.5M116.2 70.3Q108.4 74.6 103.0 75.6M116.2 70.3Q111.5 62.7 106.8 59.0M113.0 69.3Q105.2 74.5 99.6 76.2M113.0 69.3Q108.8 60.2 104.5 55.4M109.8 68.3Q102.3 72.9 97.0 74.0M109.8 68.3Q104.4 60.4 99.2 56.4M106.6 67.3Q98.8 70.7 93.3 70.9M106.6 67.3Q102.8 60.4 98.8 57.4M103.4 66.2Q96.3 69.1 91.4 68.9M103.4 66.2Q99.9 58.0 96.2 53.8M100.2 65.2Q93.4 68.2 88.6 68.1M100.2 65.2Q95.4 57.8 90.7 54.3M96.9 64.1Q90.0 67.1 85.2 66.9M96.9 64.1Q92.9 57.2 88.8 54.0" fill="none" stroke="#24563f" stroke-width="2.8" stroke-linecap="round"/><path d="M757.3 -147.2l-8.3 15.2M748.3 -142.5l-17.4 -2.0M712.4 -124.0l-11.0 19.9M712.4 -124.0l-19.9 -5.6M694.5 -114.9l-20.6 -6.2M685.5 -110.4l-7.1 20.6M676.4 -105.9l-21.1 -4.4M667.4 -101.4l-9.3 16.4M667.4 -101.4l-21.4 -3.4M658.4 -96.9l-8.9 13.6M649.3 -92.5l-8.9 18.4M640.3 -88.1l-8.0 19.5M613.1 -75.0l-11.1 17.8M594.9 -66.4l-9.6 15.3M585.8 -62.1l-11.5 16.8M576.7 -57.9l-18.4 -4.7M567.6 -53.6l-16.9 -2.8M558.5 -49.4l-8.0 18.5M549.3 -45.2l-18.8 -5.5M531.0 -37.0l-15.0 -4.8M512.7 -28.8l-7.7 16.4M512.7 -28.8l-18.5 -6.2M503.5 -24.7l-16.2 -6.1M475.9 -12.6l-9.8 14.9M466.7 -8.7l-17.2 -3.0M457.5 -4.7l-18.5 -3.8M448.3 -0.8l-6.7 13.7M448.3 -0.8l-17.0 -3.9M429.8 7.0l-17.7 -6.4M420.5 10.8l-13.1 -3.9M411.2 14.7l-16.4 -6.3M392.7 22.3l-13.0 -4.4M383.4 26.0l-15.3 -4.9M364.8 33.5l-8.5 11.4M346.1 40.8l-14.7 -4.9M336.8 44.5l-8.3 10.6M336.8 44.5l-15.8 -6.9M318.1 51.7l-15.1 -4.2M308.7 55.3l-16.3 -3.1M299.4 58.8l-16.5 -3.8M290.0 62.4l-8.2 12.7M280.6 65.9l-8.8 12.8M261.8 72.8l-5.5 11.0M261.8 72.8l-11.5 -4.5M243.0 79.7l-13.1 -3.5M233.5 83.1l-7.7 11.0M195.7 96.4l-13.0 -5.6M186.3 99.7l-11.3 -3.5M176.8 102.9l-7.0 10.1M167.3 106.2l-13.5 -3.6M157.8 109.4l-6.1 10.6M148.3 112.5l-12.2 -4.3M138.8 115.7l-6.9 10.1M138.8 115.7l-11.3 -3.3M129.2 118.8l-6.2 9.3M119.7 122.0l-11.1 -4.9M110.2 125.1l-11.3 -2.7M100.6 128.1l-7.2 9.8M100.6 128.1l-10.4 -4.4M81.5 134.2l-8.2 10.0M81.5 134.2l-9.5 -4.4M71.9 137.2l-7.9 10.6M71.9 137.2l-9.8 -3.3M62.3 140.2l-11.9 -4.0M52.7 143.1l-6.8 8.8M546.0 -37.3l17.3 12.7M546.3 -35.2l14.4 10.9M546.3 -35.2l-13.6 19.3M546.5 -33.2l14.4 11.8M546.5 -33.2l-7.2 16.7M546.7 -31.1l-9.0 17.7M546.8 -29.1l-10.1 14.4M547.0 -22.8l-9.6 16.4M547.0 -20.7l-15.0 16.0M546.9 -18.6l12.5 14.7M546.8 -16.5l10.3 18.4M546.8 -16.5l-11.2 17.8M546.6 -14.4l-12.6 12.4M546.5 -12.3l9.6 13.4M546.5 -12.3l-15.1 13.8M546.2 -10.1l7.3 14.8M546.2 -10.1l-14.0 14.0M546.0 -8.0l9.7 17.9M545.7 -5.8l-12.2 10.8M544.9 -1.5l9.6 16.3M543.6 5.0l6.4 14.1M543.0 7.2l6.3 16.0M542.4 9.4l-12.0 7.3M541.8 11.6l-11.8 9.6M541.1 13.8l-14.5 11.0M540.4 16.0l5.4 15.6M539.7 18.2l5.8 13.0M539.7 18.2l-12.0 9.7M538.9 20.5l-10.4 7.9M538.1 22.7l-14.3 7.9M537.2 25.0l5.5 13.1M537.2 25.0l-10.4 8.4M535.4 29.5l3.9 15.9M535.4 29.5l-12.1 9.3M533.4 34.1l2.6 12.0M533.4 34.1l-12.2 7.2M532.3 36.4l2.6 12.3M532.3 36.4l-11.7 6.7M531.2 38.7l-13.2 5.2M528.9 43.3l4.1 14.6M527.7 45.6l1.5 14.0M527.7 45.6l-12.6 6.0M525.1 50.3l2.4 12.7M522.4 55.0l3.2 13.7M522.4 55.0l-10.9 3.8M514.9 66.9l0.6 12.0M380.4 31.0l-17.5 5.3M379.0 32.9l-0.5 17.5M379.0 32.9l-22.5 7.0M376.1 36.7l2.1 21.3M376.1 36.7l-20.6 6.6M373.1 40.5l-16.5 2.4M371.6 42.4l-18.1 2.4M370.0 44.3l-18.1 4.9M366.7 48.0l-1.6 19.9M366.7 48.0l-17.2 5.1M363.4 51.7l-18.6 2.9M359.9 55.5l-0.1 15.8M356.2 59.2l-1.3 15.1M354.3 61.0l-19.1 0.7M350.5 64.7l-4.4 15.5M348.5 66.5l-4.9 18.4M346.5 68.3l-2.2 16.0M344.5 70.2l-1.2 15.2M344.5 70.2l-16.8 0.3M342.5 72.0l-1.0 15.0M342.5 72.0l-14.8 -0.4M340.4 73.8l-16.9 1.6M338.2 75.6l-2.7 15.3M333.9 79.2l-3.5 13.1M327.1 84.6l-14.4 1.2M322.5 88.1l-2.8 15.1M322.5 88.1l-16.3 0.8M320.1 89.9l-4.1 11.6M317.7 91.6l-4.9 14.1M317.7 91.6l-13.6 -0.0M315.2 93.4l-12.5 -0.3M310.2 96.9l-4.0 12.7M310.2 96.9l-12.8 -1.5M307.7 98.7l-2.6 14.1M302.5 102.2l-12.0 -1.6M294.5 107.3l-4.7 11.8M291.7 109.1l-4.0 9.7M655.3 -88.6l20.1 1.8M657.3 -86.5l17.3 1.1M657.3 -86.5l-0.3 22.1M659.2 -84.4l20.6 3.3M661.2 -82.2l21.2 1.8M661.2 -82.2l2.5 18.2M663.1 -80.1l21.6 4.1M668.6 -73.5l-1.0 16.3M670.4 -71.2l0.3 16.8M673.9 -66.7l20.3 4.2M677.3 -62.0l18.0 7.7M680.6 -57.3l0.4 17.1M682.3 -54.9l14.9 4.8M682.3 -54.9l-2.0 17.8M683.8 -52.5l15.0 6.3M685.4 -50.1l15.3 4.1M689.9 -42.7l13.2 3.5M689.9 -42.7l-0.2 15.9M694.2 -35.2l-0.9 16.1M695.6 -32.6l-0.5 13.6M696.9 -30.0l14.5 7.3M696.9 -30.0l-3.6 12.8M698.2 -27.4l-2.5 12.5M699.5 -24.8l12.7 5.9M700.8 -22.2l12.3 6.1M700.8 -22.2l-3.5 12.1M703.3 -16.8l12.5 7.8M706.8 -8.7l-4.7 12.8M707.9 -6.0l-3.8 10.6M709.0 -3.2l9.0 6.1M711.0 2.4l-1.8 9.8M198.6 92.1l-17.2 7.8M195.9 91.5l-10.5 -14.0M190.3 90.3l-13.9 -13.5M187.6 89.7l-10.8 -12.6M176.3 87.1l-18.5 10.7M176.3 87.1l-12.4 -17.2M173.5 86.4l-16.4 8.7M173.5 86.4l-9.7 -13.9M170.6 85.7l-13.5 7.7M167.7 85.0l-16.2 8.1M167.7 85.0l-11.7 -16.6M164.8 84.2l-17.8 8.4M164.8 84.2l-10.3 -13.9M161.9 83.5l-13.3 6.8M161.9 83.5l-10.9 -12.4M159.0 82.7l-17.9 6.5M159.0 82.7l-10.1 -15.3M156.0 81.9l-8.1 -12.9M150.1 80.3l-16.3 8.4M150.1 80.3l-9.5 -15.5M147.1 79.5l-12.5 5.8M147.1 79.5l-11.7 -14.2M144.1 78.6l-12.8 5.9M141.1 77.8l-13.5 4.6M141.1 77.8l-8.0 -13.0M138.1 76.9l-9.0 -12.1M135.0 76.0l-13.6 3.4M135.0 76.0l-8.5 -14.2M132.0 75.1l-15.3 6.2M132.0 75.1l-7.2 -13.0M128.9 74.2l-7.1 -10.5M122.7 72.3l-10.1 -11.2M119.6 71.4l-10.1 -11.0M116.4 70.4l-7.6 -11.6M110.1 68.4l-11.4 3.1M107.0 67.4l-11.4 4.1M107.0 67.4l-6.8 -8.9M97.3 64.3l-13.0 2.8M94.1 63.2l-10.2 2.4M94.1 63.2l-7.5 -9.1" fill="none" stroke="#3f8a63" stroke-width="2" stroke-linecap="round" opacity=".9"/><g class="oz oz-0"><path d="M538.1 22.6V50.6" stroke="#d9ad5c" stroke-width="1.6"/><rect x="532.1" y="48.6" width="12" height="9" rx="2" fill="#d9ad5c"/><circle cx="538.1" cy="76.6" r="20" fill="url(#bz)"/><ellipse cx="531.1" cy="68.6" rx="5.6" ry="3.6" fill="#fff" opacity=".55"/></g><g class="oz oz-1"><path d="M188.8 98.8V116.8" stroke="#d9ad5c" stroke-width="1.6"/><rect x="182.8" y="114.8" width="12" height="9" rx="2" fill="#d9ad5c"/><circle cx="188.8" cy="138.8" r="16" fill="url(#bv)"/><ellipse cx="183.2" cy="132.4" rx="4.5" ry="2.9" fill="#fff" opacity=".55"/></g><g class="oz oz-2"><path d="M598.0 -67.8V-33.8" stroke="#d9ad5c" stroke-width="1.6"/><rect x="592.0" y="-35.8" width="12" height="9" rx="2" fill="#d9ad5c"/><circle cx="598.0" cy="-12.8" r="15" fill="url(#bv)"/><ellipse cx="592.8" cy="-18.8" rx="4.2" ry="2.7" fill="#fff" opacity=".55"/></g><g class="oz oz-3"><path d="M704.4 -14.4V-2.4" stroke="#d9ad5c" stroke-width="1.6"/><rect x="698.4" y="-4.4" width="12" height="9" rx="2" fill="#d9ad5c"/><circle cx="704.4" cy="16.6" r="13" fill="url(#bz)"/><ellipse cx="699.8" cy="11.4" rx="3.6" ry="2.3" fill="#fff" opacity=".55"/></g></svg>
+      
+      <div class="hang"><span class="cord"></span><p class="tag">Pro: BUSINESS Systems<small>Od: DREAMRENTAL</small></p></div>
+    </div>
+  </div>
+  <svg class="ground" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="sn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef4fc"/></linearGradient></defs>
+    <path d="M0 132 C240 116 460 118 680 112 C900 104 1080 50 1270 42 C1360 39 1415 46 1440 52 V170 H0Z" fill="#b8c7e6" opacity=".55"/>
+    <path d="M0 128 C260 98 520 112 760 120 C980 127 1160 84 1440 92 V170 H0Z" fill="url(#sn)"/>
+  </svg>
+</header>
+
+<main>
+  <section class="vsec" id="ukazka">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Ukázka pro vás</p>
+        <h2>Takto může vypadat váš poukaz</h2>
+        <p>Logo i věnování doladíme podle vás.</p>
+      </div>
+      <div class="voucher" role="img" aria-label="Ukázka dárkového poukazu s názvem vaší firmy">
+        <div class="v-main">
+          <div class="v-top"><img src="../img/logo.svg" alt="" width="195" height="59"><span>Dárkový poukaz</span></div>
+          <p class="v-what">Den s Teslou Cybertruck</p>
+          <p class="v-for">od BUSINESS Systems</p>
+          <p class="v-note">Děkujeme za skvělý rok. Užijte si jízdu!</p>
+          <p class="v-meta"><span>Platnost <b>12 měsíců</b></span><span>Termín <b>podle vás</b></span><span>Kód <b>DR-2026-••••</b></span></p>
+        </div>
+        <div class="v-side">
+          <svg class="v-bow" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
+          <div class="v-logo has-logo"><img src="logo.png" alt="Logo BUSINESS Systems"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="darky" class="vlocky why">
+    <div class="banka b3 cerv" aria-hidden="true"><span class="nit" style="height:70px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="banka b1 modr" aria-hidden="true"><span class="nit" style="height:120px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Tři varianty</p>
+        <h2>Pro koho dárek vybíráte?</h2>
+        <p>Poukaz platí 12 měsíců, termín si obdarovaný domluví sám.</p>
+      </div>
+
+      <div class="gifts">
+        <article class="gift">
+          <span class="lid"></span>
+          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
+          <div class="pic"><img src="../img/auta/bmw-m2.webp" alt="BMW M2" loading="lazy"></div>
+          <div class="body">
+            <h3>Sportovní den</h3>
+            <p class="sub">Pro kolegy a členy týmu</p>
+            <p class="price"><strong>4 740 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 4 990 Kč · včetně DPH</span></p>
+          </div>
+        </article>
+
+        <article class="gift star">
+          <span class="lid"></span>
+          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
+          <div class="pic"><img src="../img/auta/tesla-cybertruck.webp" alt="Tesla Cybertruck" loading="lazy"></div>
+          <div class="body">
+            <span class="badge">Nejvíc se o něm mluví</span>
+            <h3>Den s Teslou Cybertruck</h3>
+            <p class="sub">Pro někoho, kdo chce něco neobvyklého</p>
+            <p class="price"><strong>10 440 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 10 990 Kč · včetně DPH</span></p>
+          </div>
+        </article>
+
+        <article class="gift">
+          <span class="lid"></span>
+          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
+          <div class="pic"><img src="../img/auta/mercedes-amg-gt-63s.webp" alt="Mercedes-AMG GT 63 S" loading="lazy"></div>
+          <div class="body">
+            <h3>Prémiová jízda</h3>
+            <p class="sub">Pro obchodní partnery a klienty</p>
+            <p class="price"><strong>5 690 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 5 990 Kč · včetně DPH</span></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="more">
+        <p><b>Kupujete pro víc lidí?</b> Napište počet poukazů, nabídku připravíme na míru.</p>
+        <a class="btn btn-gold" data-cta href="mailto:lucie@dreamrental-poukazy.eu?subject=Re%3A%20N%C3%A1pad%20na%20firemn%C3%AD%20d%C3%A1rky%20pro%20BUSINESS%20Systems">Poslat nezávaznou nabídku</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="vlocky vpravo">
+    <div class="banka b1 cerv" aria-hidden="true"><span class="nit" style="height:90px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="banka b3 modr" aria-hidden="true"><span class="nit" style="height:140px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Z čeho si vyberou</p>
+        <h2>Nebo kterékoli z dvaceti aut v Praze</h2>
+        <p>S poukazem na částku si obdarovaný vybere sám.</p>
+      </div>
+      <div class="fleet fleet3">
+        <article class="car"><div class="ph"><img src="../img/auta/porsche-gt4-mr.webp" alt="Porsche Cayman GT4 MR" loading="lazy"></div><h3>Porsche Cayman GT4 MR<span>Sportovní</span></h3></article>
+        <article class="car"><div class="ph"><img src="../img/auta/audi-r8.webp" alt="Audi R8" loading="lazy"></div><h3>Audi R8<span>Sportovní</span></h3></article>
+        <article class="car"><div class="ph"><img src="../img/auta/bmw-m5.webp" alt="BMW M5" loading="lazy"></div><h3>BMW M5<span>Sportovní</span></h3></article>
+        <article class="car"><div class="ph"><img src="../img/auta/mercedes-amg-g63.webp" alt="Mercedes-AMG G63" loading="lazy"></div><h3>Mercedes-AMG G63<span>SUV</span></h3></article>
+        <article class="car"><div class="ph"><img src="../img/auta/bmw-m4-cabrio.webp" alt="BMW M4 Cabrio" loading="lazy"></div><h3>BMW M4 Cabrio<span>Kabriolet</span></h3></article>
+        <article class="car"><div class="ph"><img src="../img/auta/audi-rs6.webp" alt="Audi RS6" loading="lazy"></div><h3>Audi RS6<span>Sportovní kombi</span></h3></article>
+      </div>
+      <p class="vic"><a class="btn btn-line" href="https://dreamrental.eu/auta/" target="_blank" rel="noopener">Celá flotila na dreamrental.eu</a></p>
+    </div>
+  </section>
+
+  <section class="why vlocky">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Jak to probíhá</p>
+        <h2>Tři kroky k poukazu</h2>
+      </div>
+      <ul class="strip"><li>Vaše logo a věnování</li><li>Faktura na IČO</li><li>Platnost 12 měsíců</li><li>Hotovo do 3 dnů</li></ul>
+      <div class="steps">
+        <div class="step"><h3>Napíšete nám</h3><p>Počet poukazů a jejich hodnotu. Stačí odpovědět na e-mail.</p></div>
+        <div class="step"><h3>Pošleme nabídku</h3><p>S cenou a návrhem poukazu s vaším logem.</p></div>
+        <div class="step"><h3>Dodáme poukazy</h3><p>Do 3 dnů v PDF, nebo osobně v Praze.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recenze">
+    <svg class="svetla" viewBox="0 0 1440 90" preserveAspectRatio="xMidYMin slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><filter id="rozmaz" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="4"/></filter></defs><path d="M0 4Q120.0 64 240 4M240 4Q360.0 64 480 4M480 4Q600.0 64 720 4M720 4Q840.0 64 960 4M960 4Q1080.0 64 1200 4M1200 4Q1320.0 64 1440 4" fill="none" stroke="#3d4a63" stroke-width="1.6" stroke-linecap="round"/><g transform="translate(33.6 18.4) rotate(8.9)" style="--z:0.37s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(76.8 30.1) rotate(4.6)" style="--z:0.74s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(120.0 34.0) rotate(0.0)" style="--z:1.11s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(163.2 30.1) rotate(-4.6)" style="--z:1.48s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(206.4 18.4) rotate(-8.9)" style="--z:1.85s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(273.6 18.4) rotate(8.9)" style="--z:2.22s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(316.8 30.1) rotate(4.6)" style="--z:2.59s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(360.0 34.0) rotate(0.0)" style="--z:0.36s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(403.2 30.1) rotate(-4.6)" style="--z:0.73s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(446.4 18.4) rotate(-8.9)" style="--z:1.10s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(513.6 18.4) rotate(8.9)" style="--z:1.47s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(556.8 30.1) rotate(4.6)" style="--z:1.84s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(600.0 34.0) rotate(0.0)" style="--z:2.21s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(643.2 30.1) rotate(-4.6)" style="--z:2.58s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(686.4 18.4) rotate(-8.9)" style="--z:0.35s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(753.6 18.4) rotate(8.9)" style="--z:0.72s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(796.8 30.1) rotate(4.6)" style="--z:1.09s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(840.0 34.0) rotate(0.0)" style="--z:1.46s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(883.2 30.1) rotate(-4.6)" style="--z:1.83s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(926.4 18.4) rotate(-8.9)" style="--z:2.20s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(993.6 18.4) rotate(8.9)" style="--z:2.57s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1036.8 30.1) rotate(4.6)" style="--z:0.34s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1080.0 34.0) rotate(0.0)" style="--z:0.71s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1123.2 30.1) rotate(-4.6)" style="--z:1.08s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1166.4 18.4) rotate(-8.9)" style="--z:1.45s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1233.6 18.4) rotate(8.9)" style="--z:1.82s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1276.8 30.1) rotate(4.6)" style="--z:2.19s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1320.0 34.0) rotate(0.0)" style="--z:2.56s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1363.2 30.1) rotate(-4.6)" style="--z:0.33s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1406.4 18.4) rotate(-8.9)" style="--z:0.70s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g></svg>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Recenze z Googlu</p>
+        <h2>Co říkají lidé, kteří u nás jezdili</h2>
+        <p>4,9 z 5 ze 155 hodnocení.</p>
+      </div>
+      <div class="reviews">
+        <article class="review"><span class="st" aria-label="5 hvězdiček">★★★★★</span><blockquote>„…jsem si na celý den půjčil Cybertruck a byl to naprosto skvělý zážitek. Auto předčilo všechna moje očekávání, obrovský výkon a spousta pozornosti všude kam jsem přijel.“</blockquote><footer><b>Daniel Petrov</b><a href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGbGF6Vk1aa0ZLYldKNlIzVjJjRFZ0TVdzMlZWRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Na Googlu</a></footer></article>
+        <article class="review"><span class="st" aria-label="5 hvězdiček">★★★★★</span><blockquote>„Služby opravdu kvalitní, personál vstřícný a příjemný. Zážitek je jednoznačně nezapomenutelný.“</blockquote><footer><b>Jakub Nedoma</b><a href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tkbFUxaG5hMUZvWlZGTVRXbGZOalpTY0ZnemFsRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Na Googlu</a></footer></article>
+        <article class="review"><span class="st" aria-label="5 hvězdiček">★★★★★</span><blockquote>„Pokaždé super. Auta vždy v dobrém stavu a připravená tak, jak mají být. Předání i vrácení rychlé…“</blockquote><footer><b>Petr Nejezchleb</b><a href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT204MmJUbHNXVWRsTnpGak9GWnpXVkZXTlZwSFZsRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Na Googlu</a></footer></article>
+      </div>
+      <div class="all-reviews"><a class="btn btn-line" href="https://www.google.com/maps?cid=7653946558548366329" target="_blank" rel="noopener">Všech 155 recenzí na Googlu</a></div>
+    </div>
+  </section>
+
+  <section class="why vlocky vpravo">
+    <div class="banka b3 modr" aria-hidden="true"><span class="nit" style="height:80px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="banka b1 cerv" aria-hidden="true"><span class="nit" style="height:110px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Časté dotazy</p><h2>Co firmy zajímá nejčastěji</h2></div>
+      <div class="faq">
+        <details><summary>Dá se poukaz vystavit na fakturu?</summary><p>Ano, na IČO vaší firmy, včetně daňového dokladu.</p></details>
+        <details><summary>Jak vypadá poukaz s naším logem?</summary><p>Návrh vám pošleme předem. Doplníme logo, barvy a věnování.</p></details>
+        <details><summary>Může poukaz uplatnit někdo jiný?</summary><p>Ano, poukaz je přenosný. Stačí nám předem dát vědět.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <canvas id="snih2" aria-hidden="true"></canvas>
+    <div class="banka b1" aria-hidden="true"><span class="nit" style="height:150px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="banka b2" aria-hidden="true"><span class="nit" style="height:84px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bv)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="wrap final-grid">
+      <div>
+        <h2>Připravíme poukazy pro BUSINESS Systems</h2>
+        <p>Napište počet a hodnotu, ozveme se s nabídkou.</p>
+        <a class="btn btn-gold" data-cta href="mailto:lucie@dreamrental-poukazy.eu?subject=Re%3A%20N%C3%A1pad%20na%20firemn%C3%AD%20d%C3%A1rky%20pro%20BUSINESS%20Systems">Probrat možnosti pro naši firmu</a>
+        <p class="kontakt-radek">Nebo napište na <a href="mailto:lucie@dreamrental-poukazy.eu">lucie@dreamrental-poukazy.eu</a></p>
+        <p class="podpis">Tým DREAMRENTAL</p>
+      </div>
+      <img src="../img/hero/gift-cloud.webp" alt="" loading="lazy">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>DREAMRENTAL · ADDICTESTATE GROUP s.r.o., IČO 19254598, Kladenská 542/38, 160 00 Praha 6</span>
+    <span>obchod@dreamrental.eu · <a href="https://dreamrental.eu">dreamrental.eu</a></span>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="mg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dd9c"/><stop offset="1" stop-color="#b9862f"/></linearGradient>
+    <symbol id="maslicka" viewBox="0 0 200 120">
+      <path d="M100 70 C70 20 18 18 22 52 C26 82 70 82 100 70Z" fill="url(#mg1)"/>
+      <path d="M100 70 C130 20 182 18 178 52 C174 82 130 82 100 70Z" fill="url(#mg1)"/>
+      <path d="M100 70 C80 40 44 38 46 54 C48 68 78 72 100 70Z" fill="#a8772a" opacity=".45"/>
+      <path d="M100 70 C120 40 156 38 154 54 C152 68 122 72 100 70Z" fill="#a8772a" opacity=".45"/>
+      <ellipse cx="100" cy="70" rx="16" ry="13" fill="#d9ad5c"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script>
+// Jemný sníh v úvodu a v závěru; při omezení animací se nespouští.
+['snih','snih2'].forEach(function(id){
+  var c=document.getElementById(id); if(!c||!c.getContext) return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var x=c.getContext('2d'), w, h, d=window.devicePixelRatio||1, vl=[];
+  function size(){ w=c.offsetWidth; h=c.offsetHeight; c.width=w*d; c.height=h*d; x.setTransform(d,0,0,d,0,0); }
+  size(); addEventListener('resize', size);
+  for(var i=0;i<(id==='snih2'?40:70);i++) vl.push({x:Math.random()*w, y:Math.random()*h, r:Math.random()*1.8+.6, s:Math.random()*.4+.2, o:Math.random()*.5+.3, k:Math.random()*6});
+  (function krok(){
+    x.clearRect(0,0,w,h);
+    for(var i=0;i<vl.length;i++){ var p=vl[i]; p.y+=p.s; p.k+=.01; p.x+=Math.sin(p.k)*.25;
+      if(p.y>h){p.y=-4; p.x=Math.random()*w;}
+      x.beginPath(); x.arc(p.x,p.y,p.r,0,6.283); x.fillStyle='rgba(255,255,255,'+p.o+')'; x.fill(); }
+    requestAnimationFrame(krok);
+  })();
+});
+</script>
+</body>
+</html>
