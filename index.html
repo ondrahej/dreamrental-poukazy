@@ -299,27 +299,73 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   .btn{transition:none}
   html{scroll-behavior:auto}
 }
-.hero-chips{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:.95rem;color:rgba(255,255,255,.8)}
-.hero-chips span::before{content:"✓ ";color:var(--gold-light);font-weight:700}
+
 .hero h1{font-size:clamp(2.1rem,3.2vw + 1rem,3.4rem);line-height:1.05}
 .hero-lead{max-width:30ch}
 .scene .tag{font-size:1.2rem}
-.price s{display:none}
-.price em{white-space:nowrap}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:.95rem;color:rgba(255,255,255,.8)}
+.hero-chips span::before{content:"✓ ";color:var(--gold-light);font-weight:700}
+.vanoce{position:relative;overflow:hidden}
+.vanoce > .wrap{position:relative;z-index:1}
+.snih-bg{background-image:radial-gradient(circle at 20% 30%,rgba(168,36,58,.05) 0 2px,transparent 3px),radial-gradient(circle,rgba(45,63,114,.08) 0 1.6px,transparent 2.4px);background-size:180px 180px,46px 46px}
+.svetla-top{padding-top:118px}
 .banka.b3{left:max(24px,calc(50% - 570px));animation-delay:-1.2s;animation-duration:6.5s}
-.kontakt-radek{margin-top:14px;font-size:1rem;opacity:.92}
-.kontakt-radek a{color:inherit;font-weight:600}
-@media(max-width:720px){.banka.b3{left:18px}.hero h1{font-size:clamp(1.9rem,8vw,2.6rem)}}
-.fleet3{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media(max-width:720px){.fleet3{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .banka.b1 svg,.banka.b3 svg{width:62px}
 .banka.cerv svg{filter:hue-rotate(335deg) saturate(1.6) drop-shadow(0 10px 14px rgba(0,0,0,.35))}
 .banka.modr svg{filter:hue-rotate(175deg) saturate(1.3) drop-shadow(0 10px 14px rgba(0,0,0,.35))}
-@media(max-width:720px){.banka.b1 svg,.banka.b3 svg{width:44px}}
+.cesmina-h{display:block;width:74px;margin:0 auto 6px;filter:drop-shadow(0 3px 4px rgba(90,60,10,.18))}
+/* tři dárky */
+.dary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;align-items:stretch}
+.dar{margin-top:18px;position:relative;display:flex;flex-direction:column;background:#fff;border-radius:22px;overflow:visible;box-shadow:0 26px 50px -30px rgba(27,34,54,.45);border:1px solid var(--line);transition:transform .25s ease,box-shadow .25s ease}
+.dar:hover{transform:translateY(-4px);box-shadow:0 34px 60px -30px rgba(27,34,54,.55)}
+.dar-foto{position:relative;aspect-ratio:16/10;border-radius:21px 21px 0 0;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(circle,rgba(255,255,255,.55) 0 1.4px,transparent 2px) 0 0/34px 34px,radial-gradient(circle,rgba(255,255,255,.3) 0 1px,transparent 1.6px) 17px 17px/34px 34px,radial-gradient(120% 90% at 50% 100%,#3a4e8a 0%,#1b2750 55%,#121a33 100%)}
+.dar-foto img{width:86%;position:relative;z-index:1;filter:drop-shadow(0 18px 18px rgba(0,0,0,.45))}
+.dar-foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,transparent,rgba(255,255,255,.18))}
+.dar-stuha{position:absolute;top:0;bottom:0;left:22px;width:16px;background:linear-gradient(90deg,#8c1c2e,#c23148 50%,#8c1c2e);box-shadow:0 0 0 1px rgba(0,0,0,.08);z-index:2}
+.dar-stuha::after{content:"";position:absolute;top:18px;left:-14px;width:44px;height:28px;background:radial-gradient(ellipse at 25% 50%,#c23148 0 46%,transparent 48%),radial-gradient(ellipse at 75% 50%,#c23148 0 46%,transparent 48%);filter:drop-shadow(0 3px 3px rgba(0,0,0,.25))}
+.dar-stitek{position:absolute;top:16px;right:16px;z-index:2;font:600 .72rem/1 var(--f-body);letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border-radius:999px;background:var(--gold-light);color:var(--night)}
+.dar-masle{position:absolute;top:-26px;left:50%;width:92px;margin-left:-46px;z-index:3;filter:hue-rotate(312deg) saturate(3.2) brightness(.72) drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.dar-pozn s{white-space:nowrap}
+.dar-telo{padding:22px 24px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
+.dar-pro{font:600 .75rem/1.2 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--berry)}
+.dar h3{font:700 1.45rem/1.15 var(--f-display);color:var(--ink)}
+.dar-auta{color:var(--ink-soft);font-size:.93rem}
+.dar-cena{margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px}
+.dar-cena strong{font:800 2rem/1 var(--f-display);letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.dar-sleva{font:600 .78rem/1 var(--f-body);padding:6px 9px;border-radius:999px;background:#e5f4ea;color:#1d6b40}
+.dar-pozn{font-size:.8rem;color:var(--ink-soft)}
+.dar-pozn s{opacity:.8}
+.dar.star{border:2px solid var(--gold);transform:translateY(-10px)}
+.dar.star:hover{transform:translateY(-14px)}
+.vic-lidi{max-width:900px;margin:36px auto 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:20px 26px;border-radius:var(--r);background:linear-gradient(120deg,#fff8e8,#fdf1d6);border:1px solid #f0dfb3}
+.vic-lidi p{max-width:52ch}
+.vic-lidi b{font-family:var(--f-display);font-weight:600}
+/* kroky */
 .strip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin:0 auto 40px;padding:0;list-style:none;font-weight:600}
 .strip li::before{content:"✓ ";color:var(--gold);font-weight:700}
-.podpis{margin-top:18px;opacity:.85}
+/* flotila */
+.fleet3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .vic{text-align:center;margin-top:34px}
+/* recenze jako z Googlu */
+.g-hlava{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 16px;margin:-20px auto 34px}
+.g-hlava .g-logo{width:30px;height:30px}
+.g-hlava b{font:700 1.9rem/1 var(--f-display);color:var(--ink)}
+.g-hvezdy{color:#fbbc04;letter-spacing:2px;font-size:1.25rem}
+.g-hlava a{color:#1a73e8;text-decoration:none;font-weight:500}
+.g-karta{background:#fff;border:1px solid #dadce0;border-radius:12px;padding:20px 22px;display:flex;flex-direction:column;gap:12px;font-family:Roboto,Arial,var(--f-body);box-shadow:0 1px 2px rgba(60,64,67,.15)}
+.g-autor{display:flex;align-items:center;gap:12px}
+.g-avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font:500 1.1rem/1 Roboto,Arial,sans-serif;flex:none}
+.g-jmeno{font-weight:500;color:#202124;font-size:.98rem}
+.g-pod{font-size:.8rem;color:#70757a}
+.g-autor .g-logo{width:22px;height:22px;margin-left:auto}
+.g-karta .g-hvezdy{font-size:1rem;letter-spacing:1px}
+.g-karta p{margin:0;color:#3c4043;font-size:.95rem;line-height:1.55}
+.g-karta a.g-odkaz{margin-top:auto;color:#1a73e8;font-size:.85rem;text-decoration:none;font-weight:500}
+.kontakt-radek{margin-top:14px;font-size:1rem;opacity:.92}
+.kontakt-radek a{color:inherit;font-weight:600}
+@media(max-width:900px){.dary{grid-template-columns:1fr;max-width:460px;margin:0 auto}.dar.star{transform:none}.dar.star:hover{transform:translateY(-4px)}}
+@media(max-width:720px){.banka.b3{left:18px}.hero h1{font-size:clamp(1.9rem,8vw,2.6rem)}.fleet3{grid-template-columns:repeat(2,minmax(0,1fr))}.banka.b1 svg,.banka.b3 svg{width:44px}.svetla-top{padding-top:96px}}
 </style>
 </head>
 <body>
@@ -329,15 +375,15 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
   <div class="wrap hero-bar"><img src="img/logo.svg" alt="DREAMRENTAL" width="195" height="59"></div>
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Firemní dárky pro váš tým</p>
+      <p class="eyebrow">Vánoční dárky pro váš tým</p>
       <h1>Dárek, který si člověk <em>opravdu užije.</em></h1>
       <p class="hero-lead">Den za volantem sportovního auta, s vaším logem na poukazu.</p>
       <div class="hero-ctas">
         <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Firemn%C3%AD%20poukazy%20DREAMRENTAL">Probrat možnosti pro naši firmu</a>
-        <a class="btn btn-ghost" href="#ukazka">Ukázka poukazu</a>
+        <a class="btn btn-ghost" href="#darky">Vybrat dárek</a>
       </div>
       <p class="hero-chips"><span>Vaše logo a věnování</span><span>Faktura na IČO</span><span>Platnost 12 měsíců</span></p>
-      <a class="stars" href="#recenze"><span aria-hidden="true">★★★★★</span><b>4,9</b> ze 155 recenzí na Googlu</a>
+      <a class="stars" href="https://www.google.com/maps?cid=7653946558548366329" target="_blank" rel="noopener"><span aria-hidden="true">★★★★★</span><b>4,9</b> ze 155 recenzí na Googlu</a>
     </div>
     <div class="scene" aria-hidden="true">
       <span class="glow"></span>
@@ -369,7 +415,95 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
 </header>
 
 <main>
-  <section class="vsec" id="ukazka">
+  <section id="darky" class="vanoce svetla-top snih-bg">
+    <svg class="svetla" viewBox="0 0 1440 90" preserveAspectRatio="xMidYMin slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><filter id="rozmaz" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="4"/></filter></defs><path d="M0 4Q120.0 64 240 4M240 4Q360.0 64 480 4M480 4Q600.0 64 720 4M720 4Q840.0 64 960 4M960 4Q1080.0 64 1200 4M1200 4Q1320.0 64 1440 4" fill="none" stroke="#3d4a63" stroke-width="1.6" stroke-linecap="round"/><g transform="translate(33.6 18.4) rotate(8.9)" style="--z:0.37s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(76.8 30.1) rotate(4.6)" style="--z:0.74s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(120.0 34.0) rotate(0.0)" style="--z:1.11s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(163.2 30.1) rotate(-4.6)" style="--z:1.48s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(206.4 18.4) rotate(-8.9)" style="--z:1.85s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(273.6 18.4) rotate(8.9)" style="--z:2.22s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(316.8 30.1) rotate(4.6)" style="--z:2.59s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(360.0 34.0) rotate(0.0)" style="--z:0.36s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(403.2 30.1) rotate(-4.6)" style="--z:0.73s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(446.4 18.4) rotate(-8.9)" style="--z:1.10s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(513.6 18.4) rotate(8.9)" style="--z:1.47s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(556.8 30.1) rotate(4.6)" style="--z:1.84s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(600.0 34.0) rotate(0.0)" style="--z:2.21s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(643.2 30.1) rotate(-4.6)" style="--z:2.58s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(686.4 18.4) rotate(-8.9)" style="--z:0.35s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(753.6 18.4) rotate(8.9)" style="--z:0.72s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(796.8 30.1) rotate(4.6)" style="--z:1.09s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(840.0 34.0) rotate(0.0)" style="--z:1.46s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(883.2 30.1) rotate(-4.6)" style="--z:1.83s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(926.4 18.4) rotate(-8.9)" style="--z:2.20s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(993.6 18.4) rotate(8.9)" style="--z:2.57s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1036.8 30.1) rotate(4.6)" style="--z:0.34s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1080.0 34.0) rotate(0.0)" style="--z:0.71s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1123.2 30.1) rotate(-4.6)" style="--z:1.08s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1166.4 18.4) rotate(-8.9)" style="--z:1.45s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1233.6 18.4) rotate(8.9)" style="--z:1.82s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1276.8 30.1) rotate(4.6)" style="--z:2.19s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1320.0 34.0) rotate(0.0)" style="--z:2.56s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1363.2 30.1) rotate(-4.6)" style="--z:0.33s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1406.4 18.4) rotate(-8.9)" style="--z:0.70s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g></svg>
+    <div class="banka b3 cerv" aria-hidden="true"><span class="nit" style="height:120px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="banka b1 modr" aria-hidden="true"><span class="nit" style="height:150px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="wrap">
+      <div class="head">
+        <svg class="cesmina-h" viewBox="0 0 100 80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6 30) rotate(-22)"><path d="M0 0C6-5 10-2 14-7C17-3 22-3 24-8C26-3 31-2 34-6C35 0 40 2 44 0C40 4 40 9 44 13C38 13 35 16 34 21C31 17 26 17 24 22C22 17 17 17 14 21C11 16 6 16 0 13C3 9 3 4 0 0Z" fill="#2f6b46"/><path d="M2 6.5Q22 9 42 6.5" stroke="#5d9b72" stroke-width="1.4" fill="none"/></g><g transform="translate(94 38) rotate(200)"><path d="M0 0C6-5 10-2 14-7C17-3 22-3 24-8C26-3 31-2 34-6C35 0 40 2 44 0C40 4 40 9 44 13C38 13 35 16 34 21C31 17 26 17 24 22C22 17 17 17 14 21C11 16 6 16 0 13C3 9 3 4 0 0Z" fill="#3a7c53"/><path d="M2 6.5Q22 9 42 6.5" stroke="#6aa97f" stroke-width="1.4" fill="none"/></g><circle cx="45" cy="40" r="8" fill="url(#bv)"/><circle cx="57" cy="44" r="7.5" fill="url(#bv)"/><circle cx="49" cy="52" r="7" fill="url(#bv)"/><circle cx="42.5" cy="37.5" r="2" fill="#fff" opacity=".5"/><circle cx="55" cy="41.5" r="1.8" fill="#fff" opacity=".5"/></svg>
+        <p class="eyebrow">Tři vánoční dárky</p>
+        <h2>Pro koho dárek vybíráte?</h2>
+        <p>Poukaz platí 12 měsíců, termín si obdarovaný domluví sám.</p>
+      </div>
+      <div class="dary">
+        <article class="dar">
+          <svg class="dar-masle" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg><div class="dar-foto"><img src="img/auta/bmw-m2.webp" alt="Sportovní den" loading="lazy"></div>
+          <div class="dar-telo">
+            <p class="dar-pro">Pro kolegy a tým</p>
+            <h3>Sportovní den</h3>
+            <p class="dar-auta">BMW M2, Mercedes C63 nebo Alpine A110 GTS</p>
+            <div class="dar-cena"><strong>4 740 Kč</strong><span class="dar-sleva">−5 % pro firmy</span></div>
+            <p class="dar-pozn">Konečná cena za 1 poukaz včetně DPH<br>Běžná cena <s>4 990 Kč</s></p>
+          </div>
+        </article>
+        <article class="dar star">
+          <svg class="dar-masle" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg><div class="dar-foto"><span class="dar-stitek">Nejoblíbenější</span><img src="img/auta/tesla-cybertruck.webp" alt="Den s Teslou Cybertruck" loading="lazy"></div>
+          <div class="dar-telo">
+            <p class="dar-pro">Pro někoho výjimečného</p>
+            <h3>Den s Teslou Cybertruck</h3>
+            <p class="dar-auta">Nerezový elektrický pick-up, který málokdo řídil</p>
+            <div class="dar-cena"><strong>10 440 Kč</strong><span class="dar-sleva">−5 % pro firmy</span></div>
+            <p class="dar-pozn">Konečná cena za 1 poukaz včetně DPH<br>Běžná cena <s>10 990 Kč</s></p>
+          </div>
+        </article>
+        <article class="dar">
+          <svg class="dar-masle" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg><div class="dar-foto"><img src="img/auta/mercedes-amg-gt-63s.webp" alt="Prémiová jízda" loading="lazy"></div>
+          <div class="dar-telo">
+            <p class="dar-pro">Pro partnery a klienty</p>
+            <h3>Prémiová jízda</h3>
+            <p class="dar-auta">Mercedes-AMG GT 63 S, AMG SL43 nebo BMW M4 Cabrio</p>
+            <div class="dar-cena"><strong>5 690 Kč</strong><span class="dar-sleva">−5 % pro firmy</span></div>
+            <p class="dar-pozn">Konečná cena za 1 poukaz včetně DPH<br>Běžná cena <s>5 990 Kč</s></p>
+          </div>
+        </article>
+      </div>
+      <div class="vic-lidi">
+        <p><b>Kupujete pro víc lidí?</b> Napište počet poukazů, nabídku připravíme na míru.</p>
+        <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Firemn%C3%AD%20poukazy%20DREAMRENTAL">Poslat nezávaznou nabídku</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="why vanoce">
+    <div class="banka b1 cerv" aria-hidden="true"><span class="nit" style="height:80px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Jak to probíhá</p>
+        <h2>Tři kroky k poukazu</h2>
+      </div>
+      <ul class="strip"><li>Vaše logo a věnování</li><li>Faktura na IČO</li><li>Platnost 12 měsíců</li><li>Hotovo do 3 dnů</li></ul>
+      <div class="steps">
+        <div class="step"><h3>Napíšete nám</h3><p>Počet poukazů a jejich hodnotu. Stačí odpovědět na e-mail.</p></div>
+        <div class="step"><h3>Pošleme nabídku</h3><p>S cenou a návrhem poukazu s vaším logem.</p></div>
+        <div class="step"><h3>Dodáme poukazy</h3><p>Do 3 dnů v PDF, nebo osobně v Praze.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vanoce snih-bg">
+    <div class="banka b3 modr" aria-hidden="true"><span class="nit" style="height:90px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="banka b1 cerv" aria-hidden="true"><span class="nit" style="height:130px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Z čeho si vyberou</p>
+        <h2>Nebo kterékoli z dvaceti aut v Praze</h2>
+        <p>S poukazem na částku si obdarovaný vybere sám.</p>
+      </div>
+      <div class="fleet fleet3">
+        <article class="car"><div class="ph"><img src="img/auta/porsche-gt4-mr.webp" alt="Porsche Cayman GT4 MR" loading="lazy"></div><h3>Porsche Cayman GT4 MR<span>Sportovní</span></h3></article>
+        <article class="car"><div class="ph"><img src="img/auta/audi-r8.webp" alt="Audi R8" loading="lazy"></div><h3>Audi R8<span>Sportovní</span></h3></article>
+        <article class="car"><div class="ph"><img src="img/auta/bmw-m5.webp" alt="BMW M5" loading="lazy"></div><h3>BMW M5<span>Sportovní</span></h3></article>
+        <article class="car"><div class="ph"><img src="img/auta/mercedes-amg-g63.webp" alt="Mercedes-AMG G63" loading="lazy"></div><h3>Mercedes-AMG G63<span>SUV</span></h3></article>
+        <article class="car"><div class="ph"><img src="img/auta/bmw-m4-cabrio.webp" alt="BMW M4 Cabrio" loading="lazy"></div><h3>BMW M4 Cabrio<span>Kabriolet</span></h3></article>
+        <article class="car"><div class="ph"><img src="img/auta/audi-rs6.webp" alt="Audi RS6" loading="lazy"></div><h3>Audi RS6<span>Sportovní kombi</span></h3></article>
+      </div>
+      <p class="vic"><a class="btn btn-line" href="https://dreamrental.eu/auta/" target="_blank" rel="noopener">Celá flotila na dreamrental.eu</a></p>
+    </div>
+  </section>
+
+  <section class="vsec why vanoce" id="ukazka">
+    <div class="banka b3 cerv" aria-hidden="true"><span class="nit" style="height:70px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Ukázka pro vás</p>
@@ -392,121 +526,33 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
     </div>
   </section>
 
-  <section id="darky" class="vlocky why">
-    <div class="banka b3 cerv" aria-hidden="true"><span class="nit" style="height:70px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="banka b1 modr" aria-hidden="true"><span class="nit" style="height:120px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Tři varianty</p>
-        <h2>Pro koho dárek vybíráte?</h2>
-        <p>Poukaz platí 12 měsíců, termín si obdarovaný domluví sám.</p>
-      </div>
-
-      <div class="gifts">
-        <article class="gift">
-          <span class="lid"></span>
-          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
-          <div class="pic"><img src="img/auta/bmw-m2.webp" alt="BMW M2" loading="lazy"></div>
-          <div class="body">
-            <h3>Sportovní den</h3>
-            <p class="sub">Pro kolegy a členy týmu</p>
-            <p class="price"><strong>4 740 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 4 990 Kč · včetně DPH</span></p>
-          </div>
-        </article>
-
-        <article class="gift star">
-          <span class="lid"></span>
-          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
-          <div class="pic"><img src="img/auta/tesla-cybertruck.webp" alt="Tesla Cybertruck" loading="lazy"></div>
-          <div class="body">
-            <span class="badge">Nejvíc se o něm mluví</span>
-            <h3>Den s Teslou Cybertruck</h3>
-            <p class="sub">Pro někoho, kdo chce něco neobvyklého</p>
-            <p class="price"><strong>10 440 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 10 990 Kč · včetně DPH</span></p>
-          </div>
-        </article>
-
-        <article class="gift">
-          <span class="lid"></span>
-          <svg class="knot" viewBox="0 0 200 120" aria-hidden="true"><use href="#maslicka"/></svg>
-          <div class="pic"><img src="img/auta/mercedes-amg-gt-63s.webp" alt="Mercedes-AMG GT 63 S" loading="lazy"></div>
-          <div class="body">
-            <h3>Prémiová jízda</h3>
-            <p class="sub">Pro obchodní partnery a klienty</p>
-            <p class="price"><strong>5 690 Kč</strong><em>firemní cena −5 %</em><span class="dph">Běžná cena 5 990 Kč · včetně DPH</span></p>
-          </div>
-        </article>
-      </div>
-
-      <div class="more">
-        <p><b>Kupujete pro víc lidí?</b> Napište počet poukazů, nabídku připravíme na míru.</p>
-        <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Firemn%C3%AD%20poukazy%20DREAMRENTAL">Poslat nezávaznou nabídku</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="vlocky vpravo">
-    <div class="banka b1 cerv" aria-hidden="true"><span class="nit" style="height:90px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="banka b3 modr" aria-hidden="true"><span class="nit" style="height:140px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Z čeho si vyberou</p>
-        <h2>Nebo kterékoli z dvaceti aut v Praze</h2>
-        <p>S poukazem na částku si obdarovaný vybere sám.</p>
-      </div>
-      <div class="fleet fleet3">
-        <article class="car"><div class="ph"><img src="img/auta/porsche-gt4-mr.webp" alt="Porsche Cayman GT4 MR" loading="lazy"></div><h3>Porsche Cayman GT4 MR<span>Sportovní</span></h3></article>
-        <article class="car"><div class="ph"><img src="img/auta/audi-r8.webp" alt="Audi R8" loading="lazy"></div><h3>Audi R8<span>Sportovní</span></h3></article>
-        <article class="car"><div class="ph"><img src="img/auta/bmw-m5.webp" alt="BMW M5" loading="lazy"></div><h3>BMW M5<span>Sportovní</span></h3></article>
-        <article class="car"><div class="ph"><img src="img/auta/mercedes-amg-g63.webp" alt="Mercedes-AMG G63" loading="lazy"></div><h3>Mercedes-AMG G63<span>SUV</span></h3></article>
-        <article class="car"><div class="ph"><img src="img/auta/bmw-m4-cabrio.webp" alt="BMW M4 Cabrio" loading="lazy"></div><h3>BMW M4 Cabrio<span>Kabriolet</span></h3></article>
-        <article class="car"><div class="ph"><img src="img/auta/audi-rs6.webp" alt="Audi RS6" loading="lazy"></div><h3>Audi RS6<span>Sportovní kombi</span></h3></article>
-      </div>
-      <p class="vic"><a class="btn btn-line" href="https://dreamrental.eu/auta/" target="_blank" rel="noopener">Celá flotila na dreamrental.eu</a></p>
-    </div>
-  </section>
-
-  <section class="why vlocky">
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Jak to probíhá</p>
-        <h2>Tři kroky k poukazu</h2>
-      </div>
-      <ul class="strip"><li>Vaše logo a věnování</li><li>Faktura na IČO</li><li>Platnost 12 měsíců</li><li>Hotovo do 3 dnů</li></ul>
-      <div class="steps">
-        <div class="step"><h3>Napíšete nám</h3><p>Počet poukazů a jejich hodnotu. Stačí odpovědět na e-mail.</p></div>
-        <div class="step"><h3>Pošleme nabídku</h3><p>S cenou a návrhem poukazu s vaším logem.</p></div>
-        <div class="step"><h3>Dodáme poukazy</h3><p>Do 3 dnů v PDF, nebo osobně v Praze.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="recenze">
+  <section id="recenze" class="vanoce svetla-top">
     <svg class="svetla" viewBox="0 0 1440 90" preserveAspectRatio="xMidYMin slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><filter id="rozmaz" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="4"/></filter></defs><path d="M0 4Q120.0 64 240 4M240 4Q360.0 64 480 4M480 4Q600.0 64 720 4M720 4Q840.0 64 960 4M960 4Q1080.0 64 1200 4M1200 4Q1320.0 64 1440 4" fill="none" stroke="#3d4a63" stroke-width="1.6" stroke-linecap="round"/><g transform="translate(33.6 18.4) rotate(8.9)" style="--z:0.37s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(76.8 30.1) rotate(4.6)" style="--z:0.74s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(120.0 34.0) rotate(0.0)" style="--z:1.11s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(163.2 30.1) rotate(-4.6)" style="--z:1.48s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(206.4 18.4) rotate(-8.9)" style="--z:1.85s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(273.6 18.4) rotate(8.9)" style="--z:2.22s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(316.8 30.1) rotate(4.6)" style="--z:2.59s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(360.0 34.0) rotate(0.0)" style="--z:0.36s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(403.2 30.1) rotate(-4.6)" style="--z:0.73s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(446.4 18.4) rotate(-8.9)" style="--z:1.10s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(513.6 18.4) rotate(8.9)" style="--z:1.47s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(556.8 30.1) rotate(4.6)" style="--z:1.84s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(600.0 34.0) rotate(0.0)" style="--z:2.21s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(643.2 30.1) rotate(-4.6)" style="--z:2.58s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(686.4 18.4) rotate(-8.9)" style="--z:0.35s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(753.6 18.4) rotate(8.9)" style="--z:0.72s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(796.8 30.1) rotate(4.6)" style="--z:1.09s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(840.0 34.0) rotate(0.0)" style="--z:1.46s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(883.2 30.1) rotate(-4.6)" style="--z:1.83s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(926.4 18.4) rotate(-8.9)" style="--z:2.20s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(993.6 18.4) rotate(8.9)" style="--z:2.57s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1036.8 30.1) rotate(4.6)" style="--z:0.34s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1080.0 34.0) rotate(0.0)" style="--z:0.71s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1123.2 30.1) rotate(-4.6)" style="--z:1.08s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1166.4 18.4) rotate(-8.9)" style="--z:1.45s"><circle class="zar" cx="0" cy="11" r="10" fill="#3f8f5a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#3f8f5a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1233.6 18.4) rotate(8.9)" style="--z:1.82s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1276.8 30.1) rotate(4.6)" style="--z:2.19s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1320.0 34.0) rotate(0.0)" style="--z:2.56s"><circle class="zar" cx="0" cy="11" r="10" fill="#fff1c9"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#fff1c9"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1363.2 30.1) rotate(-4.6)" style="--z:0.33s"><circle class="zar" cx="0" cy="11" r="10" fill="#f3c45a"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#f3c45a"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g><g transform="translate(1406.4 18.4) rotate(-8.9)" style="--z:0.70s"><circle class="zar" cx="0" cy="11" r="10" fill="#c8364d"/><rect x="-2.6" y="0" width="5.2" height="4.6" rx="1" fill="#6b5a3a"/><ellipse class="zarovka" cx="0" cy="10.5" rx="4.2" ry="6.4" fill="#c8364d"/><ellipse cx="-1.4" cy="8.6" rx="1.1" ry="2.2" fill="#fff" opacity=".55"/></g></svg>
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Recenze z Googlu</p>
         <h2>Co říkají lidé, kteří u nás jezdili</h2>
-        <p>4,9 z 5 ze 155 hodnocení.</p>
       </div>
+      <div class="g-hlava"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg><b>4,9</b><span class="g-hvezdy">★★★★★</span><a href="https://www.google.com/maps?cid=7653946558548366329" target="_blank" rel="noopener">155 recenzí na Googlu</a></div>
       <div class="reviews">
-        <article class="review"><span class="st" aria-label="5 hvězdiček">★★★★★</span><blockquote>„…jsem si na celý den půjčil Cybertruck a byl to naprosto skvělý zážitek. Auto předčilo všechna moje očekávání, obrovský výkon a spousta pozornosti všude kam jsem přijel.“</blockquote><footer><b>Daniel Petrov</b><a href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGbGF6Vk1aa0ZLYldKNlIzVjJjRFZ0TVdzMlZWRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Na Googlu</a></footer></article>
-        <article class="review"><span class="st" aria-label="5 hvězdiček">★★★★★</span><blockquote>„Služby opravdu kvalitní, personál vstřícný a příjemný. Zážitek je jednoznačně nezapomenutelný.“</blockquote><footer><b>Jakub Nedoma</b><a href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tkbFUxaG5hMUZvWlZGTVRXbGZOalpTY0ZnemFsRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Na Googlu</a></footer></article>
-        <article class="review"><span class="st" aria-label="5 hvězdiček">★★★★★</span><blockquote>„Pokaždé super. Auta vždy v dobrém stavu a připravená tak, jak mají být. Předání i vrácení rychlé…“</blockquote><footer><b>Petr Nejezchleb</b><a href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT204MmJUbHNXVWRsTnpGak9GWnpXVkZXTlZwSFZsRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Na Googlu</a></footer></article>
-      </div>
-      <div class="all-reviews"><a class="btn btn-line" href="https://www.google.com/maps?cid=7653946558548366329" target="_blank" rel="noopener">Všech 155 recenzí na Googlu</a></div>
-    </div>
-  </section>
-
-  <section class="why vlocky vpravo">
-    <div class="banka b3 modr" aria-hidden="true"><span class="nit" style="height:80px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="banka b1 cerv" aria-hidden="true"><span class="nit" style="height:110px"></span><svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><rect x="23" y="0" width="14" height="9" rx="2" fill="#c9973f"/><path d="M26 0Q30-7 34 0" fill="none" stroke="#c9973f" stroke-width="2"/><circle cx="30" cy="37" r="27" fill="url(#bz)"/><path d="M6 33Q30 44 54 33" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5"/><path d="M5 41Q30 52 55 41" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/><ellipse cx="20" cy="24" rx="6" ry="9" fill="#fff" opacity=".35" transform="rotate(-25 20 24)"/></svg></div>
-    <div class="wrap">
-      <div class="head"><p class="eyebrow">Časté dotazy</p><h2>Co firmy zajímá nejčastěji</h2></div>
-      <div class="faq">
-        <details><summary>Dá se poukaz vystavit na fakturu?</summary><p>Ano, na IČO vaší firmy, včetně daňového dokladu.</p></details>
-        <details><summary>Jak vypadá poukaz s naším logem?</summary><p>Návrh vám pošleme předem. Doplníme logo, barvy a věnování.</p></details>
-        <details><summary>Může poukaz uplatnit někdo jiný?</summary><p>Ano, poukaz je přenosný. Stačí nám předem dát vědět.</p></details>
+        <article class="g-karta">
+          <div class="g-autor"><span class="g-avatar" style="background:#1a73e8">D</span><div><div class="g-jmeno">Daniel Petrov</div><div class="g-pod">Recenze na Googlu</div></div><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></div>
+          <span class="g-hvezdy" aria-label="5 hvězdiček">★★★★★</span>
+          <p>…jsem si na celý den půjčil Cybertruck a byl to naprosto skvělý zážitek. Auto předčilo všechna moje očekávání, obrovský výkon a spousta pozornosti všude kam jsem přijel.</p>
+          <a class="g-odkaz" href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGbGF6Vk1aa0ZLYldKNlIzVjJjRFZ0TVdzMlZWRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Zobrazit na Googlu</a>
+        </article>
+        <article class="g-karta">
+          <div class="g-autor"><span class="g-avatar" style="background:#e8710a">J</span><div><div class="g-jmeno">Jakub Nedoma</div><div class="g-pod">Recenze na Googlu</div></div><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></div>
+          <span class="g-hvezdy" aria-label="5 hvězdiček">★★★★★</span>
+          <p>Služby opravdu kvalitní, personál vstřícný a příjemný. Zážitek je jednoznačně nezapomenutelný.</p>
+          <a class="g-odkaz" href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tkbFUxaG5hMUZvWlZGTVRXbGZOalpTY0ZnemFsRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Zobrazit na Googlu</a>
+        </article>
+        <article class="g-karta">
+          <div class="g-autor"><span class="g-avatar" style="background:#188038">P</span><div><div class="g-jmeno">Petr Nejezchleb</div><div class="g-pod">Recenze na Googlu</div></div><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></div>
+          <span class="g-hvezdy" aria-label="5 hvězdiček">★★★★★</span>
+          <p>Pokaždé super. Auta vždy v dobrém stavu a připravená tak, jak mají být. Předání i vrácení rychlé…</p>
+          <a class="g-odkaz" href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT204MmJUbHNXVWRsTnpGak9GWnpXVkZXTlZwSFZsRRAB!2m1!1s0x4a0500a391bad92f:0x6a3847d7b81953f9" target="_blank" rel="noopener">Zobrazit na Googlu</a>
+        </article>
       </div>
     </div>
   </section>
@@ -521,7 +567,6 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
         <p>Napište počet a hodnotu, ozveme se s nabídkou.</p>
         <a class="btn btn-gold" data-cta href="mailto:ondrej.hejduk@dreamrental.eu?subject=Firemn%C3%AD%20poukazy%20DREAMRENTAL">Probrat možnosti pro naši firmu</a>
         <p class="kontakt-radek">Nebo napište na <a href="mailto:ondrej.hejduk@dreamrental.eu">ondrej.hejduk@dreamrental.eu</a></p>
-        <p class="podpis">Tým DREAMRENTAL</p>
       </div>
       <img src="img/hero/gift-cloud.webp" alt="" loading="lazy">
     </div>
