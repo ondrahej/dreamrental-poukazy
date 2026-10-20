@@ -366,6 +366,16 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
 .kontakt-radek a{color:inherit;font-weight:600}
 @media(max-width:900px){.dary{grid-template-columns:1fr;max-width:460px;margin:0 auto}.dar.star{transform:none}.dar.star:hover{transform:translateY(-4px)}}
 @media(max-width:720px){.banka.b3{left:18px}.hero h1{font-size:clamp(1.9rem,8vw,2.6rem)}.fleet3{grid-template-columns:repeat(2,minmax(0,1fr))}.banka.b1 svg,.banka.b3 svg{width:44px}.svetla-top{padding-top:96px}}
+
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:760px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:18px 22px;border-radius:16px;background:rgba(18,26,51,.97);color:#fff;box-shadow:0 20px 50px -20px rgba(0,0,0,.6);border:1px solid rgba(241,213,142,.35);font-size:.92rem;line-height:1.5}
+.cookie[hidden]{display:none}
+.cookie p{flex:1 1 320px;margin:0;color:rgba(255,255,255,.85)}
+.cookie p b{color:#fff;font-family:var(--f-display);font-weight:600}
+.cookie a{color:var(--gold-light)}
+.cookie .tl{display:flex;gap:10px;flex-wrap:wrap}
+.cookie button{font:600 .9rem/1 var(--f-display);border-radius:999px;padding:.8rem 1.2rem;cursor:pointer;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff}
+.cookie button.ok{background:linear-gradient(180deg,var(--gold-light),var(--gold));color:var(--night);border:0}
+.pata-odkazy a{color:inherit}
 </style>
 </head>
 <body>
@@ -576,7 +586,7 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
 <footer>
   <div class="wrap">
     <span>DREAMRENTAL · ADDICTESTATE GROUP s.r.o., IČO 19254598, Kladenská 542/38, 160 00 Praha 6</span>
-    <span>obchod@dreamrental.eu · <a href="https://dreamrental.eu">dreamrental.eu</a></span>
+    <span class="pata-odkazy"><a href="/ochrana-osobnich-udaju/">Ochrana osobních údajů a cookies</a> · obchod@dreamrental.eu · <a href="https://dreamrental.eu">dreamrental.eu</a></span>
   </div>
 </footer>
 
@@ -610,6 +620,15 @@ body > footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:sp
     requestAnimationFrame(krok);
   })();
 });
+</script>
+
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookies" hidden>
+  <p><b>🍪 Cookies</b> Tato stránka nepoužívá reklamní ani analytické cookies a nesleduje vás. Ukládáme jen vaši volbu. Více v <a href="/ochrana-osobnich-udaju/">zásadách ochrany osobních údajů</a>.</p>
+  <div class="tl"><button type="button" data-volba="nezbytne">Jen nezbytné</button><button type="button" class="ok" data-volba="vse">Rozumím</button></div>
+</div>
+<script>
+(function(){var l=document.getElementById('cookie');var k='dr-cookies';try{if(localStorage.getItem(k))return;}catch(e){}
+l.hidden=false;l.querySelectorAll('button').forEach(function(b){b.onclick=function(){try{localStorage.setItem(k,b.dataset.volba);}catch(e){}l.hidden=true;};});})();
 </script>
 </body>
 </html>
